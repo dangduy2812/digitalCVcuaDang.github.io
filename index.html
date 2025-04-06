@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/font.css" />
+    <link rel="stylesheet" href="./css/laptop.css" />
+    <link rel="stylesheet" href="./css/tablet.css" />
+    <link rel="stylesheet" href="./css/mobile.css" />
+   
+    <title>Assignment03</title>
+  </head>
+  <body>
+    <!-- Banner -->
+    <div class="banner">
+      <img src="images/banner.jpg" alt="Banner" />
+      <div class="banner-text">
+        <h1>Nguyễn Phan Duy Đăng</h1>
+        <p>Automotive</p>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container ">
+        <div class="nav-container-left" >
+          <a href="#info"
+          ><i class="icon-user" style="color: #007bff"></i> Thông tin</a
+          >
+          <a href="#resume"
+          ><i class="icon-doc-text-inv" style="color: #007bff"></i> Lý lịch</a
+          >
+        </div>
+        <!-- <div class="nav-title">
+          <h1>Nguyễn Văn A</h1>
+          <p style="color: #ddd">Full Stack Developer</p>
+        </div> -->
+        <div class="avatar">
+          <img 
+          src="images/default-avatar.png"
+          width="150"
+          height="150"
+          alt="Ảnh cá nhân"
+        />
+      </div>
+      <div class="nav-container-right" >
+        <a href="#certs"
+        ><i class="icon-mail-alt" style="color: #007bff"></i> Chứng chỉ</a
+        >
+        <a href="#projects"
+        ><i class="icon-star-1" style="color: #007bff"></i> Dự án</a
+        >
+      </div>
+      </div>
+    </nav>
+    <!-- THÔNG TIN CÁ NHÂN -->
+    <div class="container">
+      <div class="row">
+          <div class="col-12 col-sm-6">
+              <section id="info" class="section">
+                  <h2 style="margin-bottom: 30px">Mục tiêu nghề nghiệp</h2>
+                  <p>
+                      Với niềm đam mê dành cho ngành công nghiệp ô tô, tôi mong muốn được
+                      làm việc tại VinFast với vị trí Kỹ sư thiết kế ô tô Trong ngắn hạn,
+                      tôi sẽ nỗ lực học hỏi và áp dụng các kiến thức về kỹ năng chuyên môn
+                      để hoàn thành tốt các nhiệm vụ được giao. Trong dài hạn, tôi mong muốn
+                      trở thành một chuyên gia trong lĩnh vực lĩnh vực chuyên môn và đóng
+                      góp vào sự phát triển của công ty..
+                  </p>
+              </section>
+          </div>
+          <div class="col-12 col-sm-6">
+              <section id="personal-info" class="section">
+                  <h2 style="margin-bottom: 20px">Thông tin cá nhân</h2>
+                  <div class="personal-info">
+                      <ul>
+                          <li><strong>Giới tính:</strong> Nam</li>
+                          <li><strong>Ngày sinh:</strong> 28/12/2000</li>
+                          <li><strong>Điện thoại:</strong> (+84) 0913963403</li>
+                          <li><strong>Email:</strong> dannguyenphanduy@gmail.com</li>
+                          <li><strong>Địa chỉ:</strong> 443/11 Huỳnh tấn phát , Nhà Bè</li>
+                          <li>
+                              <strong>Website:</strong>
+                              <a href="https://web.facebook.com/?_rdc=1&_rdr#">facebook</a>
+                          </li>
+                      </ul>
+                      <div class="social-icons">
+                          <i class="icon-twitter"></i>
+                          <i class="icon-facebook"></i>
+                          <i class="icon-gplus"></i>
+                          <i class="icon-linkedin"></i>
+                      </div>
+                  </div>
+                  <div class="submit-email">
+                      <input type="email" id="email">
+                      <p id="error-email"></p>
+                      <button onclick="handleSubmit()" type="button" class="btn btn-primary">Submit</button>
+                  </div>
+              </section>
+          </div>
+      </div>
+  </div>
+    <!-- Kinh nghiệm -->
+    <div class="resume-container">
+      <div class="resume-column parent"  onmouseover="handleOnMouseOver(this)" onmouseout="handleOnMouseOut(this)" >
+        <div class="resume-header">
+          <h2>Kinh nghiệm</h2>
+          <i class="ic-toolbox"></i>
+        </div>
+        <div class="resume-content experience" >
+          <h3>Công ty Autotech Solutions</h3>
+          <p class="date">03/2023 - <span>Hiện tại</span></p>
+          <ul>
+            <li>- Embedded Software Engineer</li>
+            <li>- Phát triển phần mềm nhúng cho hệ thống điều khiển ô tô.</li>
+            <li>- Lập trình firmware trên vi điều khiển, sử dụng C/C++.</li>
+          </ul>
+          <h3>Công ty Smart Automation</h3>
+          <p class="date">07/2021 - 02/2023</p>
+          <ul>
+            <li>- Embedded Developer</li>
+            <li>- Thiết kế và lập trình hệ thống tự động hóa trong nhà máy.</li>
+            <li>
+              - Làm việc với các giao thức truyền thông: CAN, Modbus, UART.
+            </li>
+          </ul>
+        </div>
+        <div class="control-view" >
+          <button type="button" class="btn btn-warning view-more" onclick="handleViewMore(this)">View More ▼</button>     
+         
+        </div>
+      </div>
+<!--  học vấn -->
+<div class="resume-column parent"  onmouseover="handleOnMouseOver(this)" onmouseout="handleOnMouseOut(this)">
+        <div class="resume-header">
+          <h2 >Học vấn</h2>
+
+          <i class="ic-pencil"></i>
+        </div>
+        <div class="resume-content education">
+          <h3>Đại học Kỹ thuật Ô tô & Tự động hóa</h3>
+          <p class="date">09/2018 - 06/2022</p>
+          <ul>
+            <li>- Chuyên ngành: Kỹ thuật điều khiển & Tự động hóa</li>
+            <li>- GPA: 3.5/4</li>
+          </ul>
+          <h3>Chứng chỉ Lập trình Nhúng & IoT</h3>
+          <p class="date">05/2022 - 12/2022</p>
+          <ul>
+            <li>
+              - Chứng chỉ chuyên sâu về lập trình vi điều khiển & hệ thống
+              nhúng.
+            </li>
+            <li>- GPA: 8.8/10</li>
+          </ul>
+        </div>
+        <div class="control-view" >
+          <button type="button" class="btn btn-warning view-more" onclick="handleViewMore(this)" >View More ▼</button>     
+    
+        </div>
+      </div>
+<!-- Hoạt động -->
+<div class="resume-column parent"  onmouseover="handleOnMouseOver(this)" onmouseout="handleOnMouseOut(this)">
+        <div class="resume-header">
+          <h2 >Hoạt động</h2>
+          <i class="ic-telescope"></i>
+        </div>
+        <div class="resume-content activity">
+          <h3>Automotive Hackathon 2022</h3>
+          <p class="date">09/2022 - 11/2022</p>
+          <ul>
+            <li>- Giải: Nhất bảng A</li>
+            <li>- Đề tài: Hệ thống hỗ trợ đỗ xe thông minh cho ô tô.</li>
+          </ul>
+          <h3>Câu lạc bộ Robotics & AI</h3>
+          <p class="date">05/2021 - 06/2022</p>
+          <ul>
+            <li>- Trưởng nhóm phát triển phần mềm điều khiển robot.</li>
+          </ul>
+          <h3>Dự án "Smart Factory 4.0"</h3>
+          <p class="date">12/2020</p>
+          <ul>
+            <li>
+              - Tham gia phát triển hệ thống giám sát tự động trong nhà máy.
+            </li>
+          </ul>
+        </div>
+        <div class="control-view" >
+          <button type="button" class="btn btn-warning view-more" onclick="handleViewMore(this)">View More ▼</button>     
+   
+        </div>
+      </div>
+    
+      <!-- sở thích -->
+      <div class="resume-column parent"  onmouseover="handleOnMouseOver(this)" onmouseout="handleOnMouseOut(this)">
+           <div class="resume-header">
+             <h2>Sở thích</h2>
+             <i class="ic-telescope"></i>
+            </div>
+            <div class="resume-content interests" onmouseover="handleOnMouseOver(this)">
+              <div class="interest-item">
+                <i class="ic-megaphone"></i>
+                <p>Âm nhạc</p>
+              </div>
+              <div class="interest-item">
+                <i class="ic-hotairballoon"></i>
+                <p>Du lịch</p>
+              </div>
+              <div class="interest-item">
+                <i class="ic-strategy"></i>
+                <p>Chơi game</p>
+              </div>
+              <div class="interest-item">
+                <i class="	ic-hotairballoon"></i>
+                <p>Thể Thao</p>
+              </div>
+            </div>
+            <div class="control-view" >
+              <button type="button" class="btn btn-warning view-more"  onclick="handleViewMore(this)">View More ▼</button>     
+             
+            </div>
+          </div>
+          <!--  ngôn ngữ  -->
+          <div class="resume-column parent"  onmouseover="handleOnMouseOver(this)" onmouseout="handleOnMouseOut(this)">
+            <div class="resume-header">
+              <h2>Ngôn ngữ</h2>
+              <i class="ic-mic"></i>
+            </div>
+            <div class="resume-content languages" onmouseover="handleOnMouseOver(this)">
+              <div class="language-item">
+                <p>English - IELTS 7.0</p>
+                 <!-- 3 thanh rank -->
+                <div class="rating">
+                  <span class="filled"></span>
+                  <span class="filled"></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="language-item">
+                <p>Tiếng Việt <i class="icon-star-1" style="color: gold;"></i></p>
+                <div class="rating">
+                  <span class="filled"></span>
+                  <span class="filled"></span>
+                  <span class="filled"></span>
+                </div>
+              </div>
+            </div>
+            <div class="control-view" >
+              <button type="button" class="btn btn-warning view-more" onclick="handleViewMore(this)">View More ▼</button>     
+        
+            </div>
+          </div>
+          <!--  kỹ năng -->
+          <div class="resume-column parent"  onmouseover="handleOnMouseOver(this)" onmouseout="handleOnMouseOut(this)">
+            <div class="resume-header">
+              <h2>Kỹ năng</h2>
+              <i class="ic-tools-2"></i>
+            </div>
+            <div class="resume-content skills"onmouseover="handleOnMouseOver(this)">
+              <div class="skill-item">
+                <p>C, C++: Fundamental</p>
+                <div class="rating">
+                  <span class="filled"></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="skill-item">
+                <p>Python: Intermediate</p>
+                <div class="rating">
+                  <span class="filled"></span>
+                  <span class="filled"></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="skill-item">
+                <p>MATLAB/Simulink: Intermediate</p>
+                <div class="rating">
+                  <span class="filled"></span>
+                  <span class="filled"></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="skill-item">
+                <p>HTML/CSS: Fundamental</p>
+                <div class="rating">
+                  <span class="filled"></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+            <div class="control-view" >
+              <button type="button" class="btn btn-warning view-more" onclick="handleViewMore(this)">View More ▼</button>     
+
+            </div>
+          </div>  
+        </div>
+      </div>
+      <!--  -->
+        <!--CHỨNG CHỈ -->
+        <div class="certificate-container">
+          <div class="certificate-header">
+            <h2>Chứng chỉ - Giải thưởng</h2>
+          </div>
+          <div class="certificate-list">
+            <div class="certificate-item">
+              <img src="images/Cert_DBI.png" alt="Chứng chỉ Tiếng Anh" />
+              <div class="certificate-info">
+                <h3>CHỨNG CHỈ IELTS</h3>
+                <p>- Chứng chỉ thuộc IDP</p>
+                <p>- GPA: 7.0</p>
+                <p>Nguyễn Phan Duy Đăng</p>
+              </div>
+            </div>
+            <div class="certificate-item">
+              <img
+                src="images/Cert_PRF.png"
+                alt="Chứng chỉ lập trình javascript"
+              />
+              <div class="certificate-info">
+                <h3>CHỨNG CHỈ MOS</h3>
+                <p>- Chứng chỉ thuộc chương trình MOS</p>
+                <p>- GPA: 1000</p>
+                <p>Nguyễn Phan Duy Đăng</p>
+              </div>
+            </div>
+            <div class="certificate-item">
+              <img src="images/Cert_WEB.png" alt="Chứng chỉ thiết kế WEB" />
+              <div class="certificate-info">
+                <h3>CHỨNG CHỈ THIẾT KẾ WEB - FUNIX</h3>
+                <p>- Chứng chỉ thuộc chương trình CCDN</p>
+                <p>- GPA: 8.0</p>
+                <p>Nguyễn Phan Duy Đăng</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  <!-- dự án  -->
+
+  <div class="project-container">
+    <h2>Dự án</h2>
+    <div class="project-list">
+        <div class="project-item">
+            <img src="images/project_1.png" alt="CV cá nhân" class="project-image">
+            <div class="project-content">
+                <h3><a href="digital.html" target="_blank" style="text-decoration: none; color: black"">CV cá nhân</a></h3>
+                <div class="project-date">2021</div>
+                <p class="project-subtitle">
+                    <i class="icon-user-1"></i> FUNiX
+                    <i class="icon-lamp"></i> Developer
+                </p>
+                <div class="project-details">
+                    <table>
+                        <tr>
+                            <td>Mô tả</td>
+                            <td>Trang Web CV cá nhân online. Gồm các thông tin cá nhân cũng như kỹ năng nghề nghiệp.</td>
+                        </tr>
+                        <tr>
+                            <td>Nhiệm vụ</td>
+                            <td>Phát triển code - Review code - Tối ưu code - Xử lý lỗi</td>
+                        </tr>
+                        <tr>
+                            <td>Công nghệ</td>
+                            <td>HTML, CSS</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="project-item">
+            <img src="images/project_2.png" alt="Solar Tracking" class="project-image">
+            <div class="project-content">
+                <h3><a href="digital.html" target="_blank" style="text-decoration: none; color: black">Solar tracking</a></h3>
+                <div class="project-date">2024</div>
+                <p class="project-subtitle">
+                    <i class="icon-user-1"></i> TDTU
+                    <i class="icon-lamp"></i> Developer
+                </p>
+                <div class="project-details">
+                    <table>
+                        <tr>
+                            <td>Mô tả</td>
+                            <td>Ứng dụng giúp quản lý Pin năng lượng mặt trời. Bao gồm các chức năng theo dõi nhiệt độ, độ ẩm, IOT.</td>
+                        </tr>
+                        <tr>
+                            <td>Nhiệm vụ</td>
+                            <td>Phát triển code - Review code - Tối ưu code - Xử lý lỗi</td>
+                        </tr>
+                        <tr>
+                            <td>Công nghệ</td>
+                            <td>Arudino, rednote , C++</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="project-item">
+            <img src="images/project_3.png" alt="Xử lý nước thải" class="project-image">
+            <div class="project-content">
+                <h3><a href="digital.html" target="_blank" style="text-decoration: none; color: black">Hệ thống xử lý nước thải</a></h3>
+                <div class="project-date">2022</div>
+                <p class="project-subtitle">
+                    <i class="icon-user-1"></i> TDTU
+                    <i class="icon-lamp"></i> Developer
+                </p>
+                <div class="project-details">
+                    <table>
+                        <tr>
+                            <td>Mô tả</td>
+                            <td>Hệ thống điều khiển trạm xử lý nước thải, Tính năng bao gồm : ALARM, CONTROL ,PI&D.</td>
+                        </tr>
+                        <tr>
+                            <td>Nhiệm vụ</td>
+                            <td>Phát triển code - Xây dựng Trạm - Tối ưu code - Xử lý lỗi</td>
+                        </tr>
+                        <tr>
+                            <td>Công nghệ</td>
+                            <td>PLC, TIA portal</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+  <div class="contact-links">
+      <a href="https://www.facebook.com/dannguyenphanduy" target="_blank">
+        <i class="icon-facebook"></i> <span>Facebook</span>
+      </a>
+      <a href="https://www.linkedin.com/in/dang2812" target="_blank">
+        <i class="icon-linkedin"></i> <span>LinkedIn</span>
+         
+      </a>
+      <a href="https://github.com/dang34wdf" target="_blank">
+          <i class="icon-github-circled"></i> <span>Github</span>
+      </a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+  </body>
+  
+</html>
