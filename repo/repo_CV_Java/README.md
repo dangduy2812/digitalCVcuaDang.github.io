@@ -28,3 +28,17 @@ CV_Java_demos/vehicle-api.html
 ```
 
 Output: `repo/repo_CV_Java/deploy/` — push folder này lên repo GitHub Pages riêng (public). Không có hub, không có CV khác.
+
+Tạo repo trống trên GitHub: **cv-java-software-engineer** (public).
+
+```powershell
+cd repo/repo_CV_Java/deploy
+git init
+git add .
+git commit -m "CV Software Engineer"
+git branch -M main
+git remote add origin https://github.com/dangduy2812/cv-java-software-engineer.git
+git push -u origin main
+```
+
+**Link gửi NTD:** https://dangduy2812.github.io/cv-java-software-engineer/

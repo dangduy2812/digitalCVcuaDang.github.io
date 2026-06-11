@@ -11,6 +11,21 @@ param(
 $ErrorActionPreference = "Stop"
 $Root = Split-Path $PSScriptRoot -Parent
 
+function Get-HubPinHash([string]$Pin) {
+    $bytes = [System.Text.Encoding]::UTF8.GetBytes("${Pin}:cv-hub-gate")
+    $hash = [System.Security.Cryptography.SHA256]::Create().ComputeHash($bytes)
+    return -join ($hash | ForEach-Object { $_.ToString("x2") })
+}
+
+$hubUrl = "https://dangduy2812.github.io/digitalCVcuaDang.github.io/"
+$pinHash = ""
+$secretPath = Join-Path $Root ".hub-secret.local.json"
+if (Test-Path $secretPath) {
+    $secret = Get-Content $secretPath -Raw | ConvertFrom-Json
+    if ($secret.hubUrl) { $hubUrl = $secret.hubUrl }
+    if ($secret.pin) { $pinHash = Get-HubPinHash $secret.pin }
+}
+
 # Resolve repo folder from registry or convention
 if (-not $RepoFolder) {
     $registryPath = Join-Path $Root "CV_master_registry.json"
@@ -36,8 +51,11 @@ if (-not (Test-Path (Join-Path $CvSrc "cv.json"))) {
 
 Write-Host "Exporting standalone CV: $Id -> $Out"
 
-if (Test-Path $Out) { Remove-Item $Out -Recurse -Force }
-New-Item -ItemType Directory -Force -Path $Out | Out-Null
+if (Test-Path $Out) {
+    Get-ChildItem $Out -Force | Where-Object { $_.Name -ne ".git" } | Remove-Item -Recurse -Force
+} else {
+    New-Item -ItemType Directory -Force -Path $Out | Out-Null
+}
 
 # Platform files (minimal JS set)
 foreach ($dir in @("CV_master_css", "CV_master_fonts")) {
@@ -68,11 +86,13 @@ Get-ChildItem $Out -Recurse -Filter "*.html" | ForEach-Object {
 $cvHtml = Get-Content (Join-Path $Root "cv.html") -Raw
 $standaloneScript = @"
     <script>
-      window.__CV_STANDALONE__ = { id: "$Id", dataUrl: "cv.json", assetBase: "", repoFolder: "$RepoFolder" };
+      window.__CV_STANDALONE__ = { id: "$Id", dataUrl: "cv.json", assetBase: "", repoFolder: "$RepoFolder", hubUrl: "$hubUrl", pinHash: "$pinHash" };
     </script>
 "@
 $cvHtml = $cvHtml -replace '(<script src="CV_master_js/i18n.js"></script>)', "$standaloneScript`n    `$1"
 $cvHtml = $cvHtml -replace '<title>CV</title>', "<title>CV - $Id</title>"
+$cvHtml = $cvHtml -replace '\s*<a href="index\.html" class="demo-back-link"[^>]*>.*?</a>', ''
+$cvHtml = $cvHtml -replace '<a href="index\.html" class="brand">', '<a href="#" class="brand">'
 [System.IO.File]::WriteAllText((Join-Path $Out "index.html"), $cvHtml, $utf8NoBom)
 
 Write-Host "Done. Deploy folder: $Out"

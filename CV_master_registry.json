@@ -7,7 +7,9 @@
       "role": { "en": "Software Engineer", "vi": "Software Engineer" },
       "accent": "#a50064",
       "thumbnail": "CV_Java_images/default-avatar.png",
-      "updated": "2026-06-11"
+      "updated": "2026-06-11",
+      "deployUrl": "https://dangduy2812.github.io/cv-java-software-engineer/",
+      "githubRepo": "https://github.com/dangduy2812/cv-java-software-engineer"
     }
   ]
 }

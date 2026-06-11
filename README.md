@@ -2,6 +2,16 @@
 
 Hệ thống quản lý **nhiều CV** trên một website tĩnh (GitHub Pages). Mỗi CV nằm trong **repo riêng** dưới `repo/repo_CV_<Tên>/` — tách biệt dữ liệu để export và push **1 repo = 1 CV** cho nhà tuyển dụng mà không lộ CV khác.
 
+## Link trực tuyến
+
+| Mục đích | Link | Ghi chú |
+|----------|------|---------|
+| **Hub quản lý** (cá nhân) | https://dangduy2812.github.io/digitalCVcuaDang.github.io/ | Chứa editor + danh sách CV — **không gửi link này cho NTD** |
+| **CV Java — gửi NTD** | https://dangduy2812.github.io/cv-java-software-engineer/ | Chỉ 1 CV Software Engineer, không có hub |
+| Xem CV Java trên hub | https://dangduy2812.github.io/digitalCVcuaDang.github.io/cv.html?id=java | Preview trước khi export |
+
+> Repo GitHub CV standalone: https://github.com/dangduy2812/cv-java-software-engineer
+
 ## Hai tầng kiến trúc
 
 | Tầng | Thư mục | Vai trò |
@@ -68,10 +78,25 @@ archive/                    # File cũ (legacy)
 ## Gửi cho nhà tuyển dụng (1 repo riêng)
 
 ```powershell
+# 1. Export site độc lập
 .\scripts\export-standalone.ps1 -Id java
+
+# 2. Tạo repo trống trên GitHub: cv-java-software-engineer (public, không README)
+# 3. Push thư mục deploy
+cd repo/repo_CV_Java/deploy
+git init
+git add .
+git commit -m "CV Software Engineer"
+git branch -M main
+git remote add origin https://github.com/dangduy2812/cv-java-software-engineer.git
+git push -u origin main
 ```
 
-Tạo `repo/repo_CV_Java/deploy/` — site độc lập chỉ chứa CV đó + engine render. Push thư mục `deploy/` lên **repo GitHub Pages mới** (public).
+Sau đó bật **Settings → Pages → branch `main` / root** trên repo `cv-java-software-engineer`.
+
+**Link gửi NTD:** https://dangduy2812.github.io/cv-java-software-engineer/
+
+Mỗi lần sửa CV: chạy lại bước 1, rồi `git add . && git commit -m "update" && git push` trong `deploy/`.
 
 Chi tiết: [`repo/repo_CV_Java/README.md`](repo/repo_CV_Java/README.md)
 

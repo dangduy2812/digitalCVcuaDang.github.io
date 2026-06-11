@@ -366,13 +366,47 @@ function renderCV(data, repoFolder) {
   applyStandaloneChrome();
 }
 
+async function hashHubPin(pin) {
+  const data = new TextEncoder().encode(String(pin) + ":cv-hub-gate");
+  const buf = await crypto.subtle.digest("SHA-256", data);
+  return [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+function wireHubSecretAccess(brand, cfg) {
+  if (!cfg || !cfg.hubUrl || !cfg.pinHash) return;
+  let clicks = 0;
+  let timer = null;
+  brand.addEventListener("click", async (e) => {
+    e.preventDefault();
+    clicks += 1;
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      clicks = 0;
+    }, 2000);
+    if (clicks < 5) return;
+    clicks = 0;
+    clearTimeout(timer);
+    const pin = prompt("PIN:");
+    if (!pin) return;
+    const hash = await hashHubPin(pin);
+    if (hash === cfg.pinHash) {
+      location.href = cfg.hubUrl;
+      return;
+    }
+    alert("Invalid PIN.");
+  });
+}
+
 function applyStandaloneChrome() {
-  if (!window.__CV_STANDALONE__) return;
-  document.querySelectorAll(".demo-back-link").forEach((el) => (el.style.display = "none"));
+  const cfg = window.__CV_STANDALONE__;
+  if (!cfg) return;
+  document.querySelectorAll(".demo-back-link").forEach((el) => el.remove());
   const brand = document.querySelector(".brand");
   if (brand) {
     brand.removeAttribute("href");
     brand.style.cursor = "default";
+    brand.setAttribute("title", brand.getAttribute("title") || "");
+    wireHubSecretAccess(brand, cfg);
   }
 }
 
@@ -486,11 +520,14 @@ function handleEmailGate() {
 }
 
 function showError(msg) {
+  const backLink = window.__CV_STANDALONE__
+    ? ""
+    : `<a href="index.html" class="btn-primary-custom" style="margin-top:1rem;">← All CVs</a>`;
   document.getElementById("cv-root").innerHTML = `
     <section class="section-wrap" style="text-align:center;padding-top:6rem;">
       <h2 class="section-title">CV not found</h2>
       <p class="section-subtitle">${esc(msg || "Could not load this CV.")}</p>
-      <a href="index.html" class="btn-primary-custom" style="margin-top:1rem;">← All CVs</a>
+      ${backLink}
     </section>`;
 }
 
