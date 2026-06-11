@@ -1,0 +1,48 @@
+@media (min-width: 576px) and (max-width: 992px) {
+  /* Ẩn tiêu đề Navbar */
+  .nav-title {
+    display: none;
+  }
+  /* Ẩn avatar */
+  .avatar {
+    display: none;
+  }
+  .nav-container-left {
+    display: flex;
+    padding-right: 40px;
+  }
+  .nav-container-right {
+    display: flex;
+    padding-left: 40px;
+  }
+
+  /* Điều chỉnh khoảng cách giữa các cột trong Thông tin cá nhân */
+  #info {
+    padding-left: 50px;
+  }
+  #personal-info {
+    padding-right: 50px;
+  }
+
+  /* Chuyển layout phần nghề nghiệp từ 3 cột xuống 2 cột */
+  .resume-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Điều chỉnh kích thước hình ảnh chứng chỉ */
+  .certificate-item img {
+    width: 150px;
+  }
+
+  /* Điều chỉnh hình ảnh dự án */
+  .project-image {
+    height: 150px;
+  }
+  .project-content h3 {
+    font-size: 18px;
+  }
+}
+.section {
+  padding-left: 80px !important;
+}
+/* nâng cao  */

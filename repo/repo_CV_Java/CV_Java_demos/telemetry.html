@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vehicle Telemetry Dashboard - Demo</title>
+    <link rel="stylesheet" href="/CV_master_css/font.css" />
+    <link rel="stylesheet" href="/CV_master_css/main.css" />
+    <script>
+      (function () {
+        var t = localStorage.getItem("cv-theme");
+        if (t) document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script>
+  </head>
+  <body class="demo-page">
+    <header class="demo-header">
+      <div>
+        <a href="/cv.html?id=java" class="demo-back-link">← CV</a>
+        <h1 style="display: inline; margin-left: 1rem;" data-i18n="demo_telemetry_title">Vehicle Telemetry Dashboard</h1>
+      </div>
+      <div class="nav-controls">
+        <div class="lang-toggle">
+          <button class="lang-btn active" data-lang="en" type="button">EN</button>
+          <button class="lang-btn" data-lang="vi" type="button">VI</button>
+        </div>
+        <button class="btn-icon" id="theme-toggle" type="button"><i class="icon-moon" id="theme-icon"></i></button>
+      </div>
+    </header>
+
+    <main class="demo-content">
+      <div class="demo-card">
+        <p><span class="status-dot"></span><span data-i18n="demo_telemetry_status">Đang nhận dữ liệu real-time (mô phỏng Kafka stream)</span></p>
+      </div>
+
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-value" id="speed-value">0</div>
+          <div class="metric-unit">km/h</div>
+          <div class="metric-label" data-i18n="demo_speed">Tốc độ</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value" id="temp-value">0</div>
+          <div class="metric-unit">°C</div>
+          <div class="metric-label" data-i18n="demo_temp">Nhiệt độ động cơ</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value" id="fuel-value">0</div>
+          <div class="metric-unit">%</div>
+          <div class="metric-label" data-i18n="demo_fuel">Mức nhiên liệu</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value" id="rpm-value">0</div>
+          <div class="metric-unit">RPM</div>
+          <div class="metric-label" data-i18n="demo_rpm">Vòng quay</div>
+        </div>
+      </div>
+
+      <div class="demo-card">
+        <h3 data-i18n="demo_chart_title">Biểu đồ tốc độ (60 giây gần nhất)</h3>
+        <canvas id="speed-chart" class="chart-canvas"></canvas>
+      </div>
+
+      <div class="demo-card">
+        <h3 data-i18n="demo_json_response">Latest Kafka Message</h3>
+        <pre class="json-output" id="json-output">{}</pre>
+      </div>
+    </main>
+
+    <script src="/CV_master_js/script.js"></script>
+    <script src="telemetry.js"></script>
+  </body>
+</html>

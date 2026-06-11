@@ -1,0 +1,292 @@
+{
+  "id": "java",
+  "meta": {
+    "name": "Nguyễn Phan Duy Đăng",
+    "role": { "en": "Java Backend Developer (Junior)", "vi": "Lập trình viên Java Backend (Junior)" },
+    "accent": "#a50064",
+    "avatar": "CV_Java_images/default-avatar.png",
+    "cvPdf": "CV_Java_assets/Nguyen-Phan-DuyDang-Software_Engineer.pdf",
+    "tags": ["Java", "Spring Boot", "REST API", "MySQL"]
+  },
+  "contact": {
+    "gender": { "en": "Male", "vi": "Nam" },
+    "dob": "28/12/2000",
+    "phone": "0901075805",
+    "email": "dangnguyenphanduy@gmail.com",
+    "address": { "en": "2251 Huynh Tan Phat, Nha Be, HCMC", "vi": "2251 Huỳnh Tấn Phát, Nhà Bè, TP.HCM" },
+    "facebook": "https://www.facebook.com/dannguyenphanduy",
+    "linkedin": "https://www.linkedin.com/in/nguyenphanduydang/",
+    "github": "https://github.com/dang34wdf"
+  },
+  "sections": {
+    "about": {
+      "enabled": true,
+      "title": { "en": "Career Objective", "vi": "Mục tiêu nghề nghiệp" },
+      "text": {
+        "en": "A Junior Java Backend Developer with a solid OOP foundation, passionate about building REST APIs with Spring Boot. Eager to learn and grow in a dynamic fintech environment like MoMo, contributing to payment and e-wallet services for millions of users.",
+        "vi": "Là lập trình viên Java Backend Junior với nền tảng OOP vững chắc, đam mê xây dựng REST API và làm việc với Spring Boot. Mong muốn được học hỏi, phát triển trong môi trường fintech năng động như MoMo, đóng góp vào các dịch vụ thanh toán và ví điện tử phục vụ hàng triệu người dùng."
+      }
+    },
+    "experience": {
+      "enabled": true,
+      "title": { "en": "Experience", "vi": "Kinh nghiệm" },
+      "items": [
+        {
+          "org": "FPT Software",
+          "role": { "en": "Software Engineer", "vi": "Software Engineer" },
+          "date": { "en": "Oct 2025 - Present", "vi": "10/2025 - Hiện tại" },
+          "current": true,
+          "tech": {
+            "en": "Java 17 · Spring Boot · CompletableFuture · ConcurrentHashMap · JSON",
+            "vi": "Java 17 · Spring Boot · CompletableFuture · ConcurrentHashMap · JSON"
+          },
+          "points": [
+            {
+              "en": "Built a high-performance orchestration engine for data streaming, payload parsing & async metadata mediation",
+              "vi": "Xây dựng orchestration engine xử lý data streaming, parse payload & điều phối metadata bất đồng bộ"
+            },
+            {
+              "en": "Designed Layered Architecture (MVC) with clear separation between Services and data layers",
+              "vi": "Thiết kế kiến trúc phân lớp (MVC), tách biệt rõ Service và tầng dữ liệu"
+            },
+            {
+              "en": "Engineered async workflows with CompletableFuture & ExecutorService; Stream API validation for high-throughput data",
+              "vi": "Xử lý bất đồng bộ với CompletableFuture & ExecutorService; validation bằng Stream API cho luồng dữ liệu lớn"
+            },
+            {
+              "en": "Optimized memory with ConcurrentHashMap/LinkedBlockingQueue; tuned SQL/Hibernate — reduced DB latency ~25%",
+              "vi": "Tối ưu bộ nhớ với ConcurrentHashMap/LinkedBlockingQueue; tune SQL/Hibernate — giảm độ trễ DB ~25%"
+            }
+          ]
+        },
+        {
+          "org": "Northstar Adjuster JSC",
+          "role": { "en": "Software Engineer", "vi": "Software Engineer" },
+          "date": { "en": "Nov 2023 - May 2024", "vi": "11/2023 - 05/2024" },
+          "current": false,
+          "points": [
+            {
+              "en": "Automated disaster compensation claim analysis & report generation",
+              "vi": "Tự động hóa phân tích & sinh báo cáo bồi thường thiên tai"
+            },
+            {
+              "en": "Processed Excel/CSV datasets with SQL for insurance workflows",
+              "vi": "Xử lý dữ liệu Excel/CSV kết hợp SQL cho quy trình bảo hiểm"
+            }
+          ]
+        }
+      ]
+    },
+    "education": {
+      "enabled": true,
+      "title": { "en": "Education", "vi": "Học vấn" },
+      "items": [
+        {
+          "org": { "en": "Ton Duc Thang University", "vi": "Đại học Tôn Đức Thắng" },
+          "date": { "en": "Oct 2018 - Feb 2024", "vi": "10/2018 - 02/2024" },
+          "current": false,
+          "points": [
+            { "en": "Major: Control Engineering & Automation", "vi": "Ngành: Kỹ thuật Điều khiển & Tự động hóa" },
+            { "en": "GPA: 7.8/10 (Good)", "vi": "GPA: 7.8/10 (Khá)" },
+            {
+              "en": "Strong foundation in logic, algorithms, and real-time control systems",
+              "vi": "Nền tảng vững về logic, thuật toán và hệ thống điều khiển thời gian thực"
+            },
+            {
+              "en": "Capstone & lab projects involving data acquisition, sensors & automation pipelines",
+              "vi": "Đồ án & thực hành về thu thập dữ liệu, cảm biến và pipeline tự động hóa"
+            }
+          ]
+        },
+        {
+          "org": { "en": "FUNiX Online", "vi": "FUNiX Online" },
+          "date": { "en": "2025", "vi": "2025" },
+          "current": false,
+          "points": [
+            {
+              "en": "Web Development Foundations — HTML, CSS, JavaScript & responsive UI basics",
+              "vi": "Web Development Foundations — HTML, CSS, JavaScript & UI responsive cơ bản"
+            },
+            {
+              "en": "Automotive Embedded Systems — IoT concepts, real-time data & embedded fundamentals",
+              "vi": "Automotive Embedded Systems — IoT, dữ liệu thời gian thực & nền tảng nhúng"
+            },
+            {
+              "en": "Self-paced learning aligned with modern software engineering practices",
+              "vi": "Tự học theo hướng thực hành, bám sát quy trình phát triển phần mềm hiện đại"
+            }
+          ]
+        }
+      ]
+    },
+    "skills": {
+      "enabled": true,
+      "title": { "en": "Skills", "vi": "Kỹ năng" },
+      "groups": [
+        {
+          "label": { "en": "Programming Languages", "vi": "Ngôn ngữ lập trình" },
+          "items": [
+            "Java (Core, Stream API, Multithreading)",
+            "C/C++",
+            "SQL",
+            "JavaScript"
+          ]
+        },
+        {
+          "label": { "en": "Scripting & Automation", "vi": "Scripting & Tự động hóa" },
+          "items": ["Python (workflow automation & data parsing)"]
+        },
+        {
+          "label": { "en": "Tools & DevOps", "vi": "Công cụ & DevOps" },
+          "items": ["Docker", "Git/GitHub", "Linux/Ubuntu", "VS Code", "File I/O"]
+        },
+        {
+          "label": { "en": "Databases & Storage", "vi": "Cơ sở dữ liệu & Lưu trữ" },
+          "items": [
+            "MySQL (Schema design, Query optimization)",
+            "JSON persistence",
+            "Redis (Caching)"
+          ]
+        },
+        {
+          "label": { "en": "Frameworks & Architecture", "vi": "Framework & Kiến trúc" },
+          "items": [
+            "Spring Boot",
+            "Spring MVC",
+            "Spring Data JPA",
+            "Hibernate",
+            "Layered Architecture / MVC",
+            "OOP / SOLID"
+          ]
+        }
+      ],
+      "soft": {
+        "label": { "en": "Soft Skills", "vi": "Kỹ năng mềm" },
+        "items": [
+          {
+            "title": { "en": "Self-Leadership & Adaptability", "vi": "Tự quản lý & Thích nghi" },
+            "text": {
+              "en": "Strong ability to self-manage, take ownership of tasks, and quickly adapt to new technology stacks.",
+              "vi": "Khả năng tự quản lý, chủ động nhận trách nhiệm và nhanh chóng thích nghi với công nghệ mới."
+            }
+          },
+          {
+            "title": { "en": "Clear Communication & Presentation", "vi": "Giao tiếp & Trình bày rõ ràng" },
+            "text": {
+              "en": "Ability to articulate technical concepts clearly to team members and stakeholders.",
+              "vi": "Trình bày các khái niệm kỹ thuật một cách rõ ràng với đồng nghiệp và các bên liên quan."
+            }
+          },
+          {
+            "title": { "en": "Collaborative Teamwork & Problem-solving", "vi": "Làm việc nhóm & Giải quyết vấn đề" },
+            "text": {
+              "en": "Experienced in technical troubleshooting and working effectively within cross-functional teams.",
+              "vi": "Kinh nghiệm xử lý sự cố kỹ thuật và làm việc hiệu quả trong các nhóm đa chức năng."
+            }
+          }
+        ]
+      }
+    },
+    "interests": {
+      "enabled": true,
+      "title": { "en": "Interests", "vi": "Sở thích" },
+      "items": [
+        {
+          "icon": "ic-puzzle",
+          "label": { "en": "Open Source & Side Projects", "vi": "Open Source & Dự án cá nhân" },
+          "desc": {
+            "en": "Build backend side projects and explore open-source repos to sharpen production-ready coding habits.",
+            "vi": "Xây dựng dự án backend cá nhân và đóng góp open-source để rèn thói quen code sẵn sàng production."
+          }
+        },
+        {
+          "icon": "ic-book-open",
+          "label": { "en": "System Design & Tech Reading", "vi": "System Design & Đọc sách kỹ thuật" },
+          "desc": {
+            "en": "Study scalable architecture patterns, distributed systems & engineering blogs from top tech companies.",
+            "vi": "Tìm hiểu kiến trúc mở rộng, hệ thống phân tán và blog kỹ thuật từ các công ty công nghệ hàng đầu."
+          }
+        },
+        {
+          "icon": "ic-strategy",
+          "label": { "en": "Algorithm & Problem Solving", "vi": "Thuật toán & Giải quyết vấn đề" },
+          "desc": {
+            "en": "Regular practice on LeetCode/HackerRank to strengthen logic and interview readiness.",
+            "vi": "Luyện tập thường xuyên trên LeetCode/HackerRank để củng cố tư duy logic và chuẩn bị phỏng vấn."
+          }
+        },
+        {
+          "icon": "ic-megaphone",
+          "label": { "en": "Developer Communities", "vi": "Cộng đồng lập trình viên" },
+          "desc": {
+            "en": "Join meetups & online forums to exchange ideas, learn best practices and grow professional network.",
+            "vi": "Tham gia meetup & diễn đàn trực tuyến để trao đổi kinh nghiệm, học best practice và mở rộng network."
+          }
+        },
+        {
+          "icon": "ic-lightbulb",
+          "label": { "en": "AI Tools & Productivity", "vi": "Công cụ AI & Năng suất" },
+          "desc": {
+            "en": "Leverage AI assistants for debugging, documentation & code quality — boosting delivery efficiency.",
+            "vi": "Ứng dụng AI hỗ trợ debug, viết tài liệu và chất lượng code — tăng hiệu suất làm việc."
+          }
+        },
+        {
+          "icon": "ic-hotairballoon",
+          "label": { "en": "Gym & Wellness", "vi": "Gym & Sức khỏe" },
+          "desc": {
+            "en": "Stay disciplined through fitness — maintaining focus, energy and resilience under project pressure.",
+            "vi": "Duy trì kỷ luật qua tập luyện — giữ tập trung, năng lượng và sức bền khi áp lực dự án."
+          }
+        }
+      ]
+    },
+    "certificates": {
+      "enabled": true,
+      "title": { "en": "Certificates", "vi": "Chứng chỉ" },
+      "subtitle": { "en": "Achieved certifications", "vi": "Các chứng chỉ đã đạt được" },
+      "items": [
+        { "name": "IELTS 6.0", "desc": { "en": "English certificate - IDP (equivalent TOEIC 650+)", "vi": "Chứng chỉ tiếng Anh - IDP (tương đương TOEIC 650+)" }, "image": "CV_Java_images/Cert_DBI.png" },
+        { "name": "MOS Certificate", "desc": { "en": "Word, Excel, PowerPoint - 2019", "vi": "Word, Excel, PowerPoint - 2019" }, "image": "CV_Java_images/Cert_PRF.png" },
+        { "name": "FUNiX Web Development", "desc": { "en": "HTML, CSS, JavaScript - 2025", "vi": "HTML, CSS, JavaScript - 2025" }, "image": "CV_Java_images/Cert_WEB.png" }
+      ]
+    },
+    "projects": {
+      "enabled": true,
+      "title": { "en": "Projects", "vi": "Dự án" },
+      "subtitle": { "en": "Personal & academic projects", "vi": "Các dự án cá nhân & học tập" },
+      "items": [
+        {
+          "name": "Vehicle Profile REST API",
+          "desc": { "en": "REST API system for managing vehicle profiles and telemetry settings. Built with Spring Boot, JPA, MySQL with input validation.", "vi": "Hệ thống REST API quản lý hồ sơ xe và cài đặt telemetry. Sử dụng Spring Boot, JPA, MySQL với validation đầu vào." },
+          "tech": "Java, Spring Boot, JPA, MySQL",
+          "tags": ["2025", "Personal"],
+          "image": "CV_Java_images/project_1.png",
+          "demo": "CV_Java_demos/vehicle-api.html"
+        },
+        {
+          "name": "Vehicle Telemetry Dashboard",
+          "desc": { "en": "Real-time dashboard monitoring vehicle telemetry data (speed, temperature, fuel level).", "vi": "Dashboard theo dõi dữ liệu telemetry xe (tốc độ, nhiệt độ, nhiên liệu) cập nhật theo thời gian thực." },
+          "tech": "Java, Spring Boot, Redis, PostgreSQL",
+          "tags": ["2025", "Personal"],
+          "image": "CV_Java_images/project_2.png",
+          "demo": "CV_Java_demos/telemetry.html"
+        },
+        {
+          "name": "IoT Smart Sensor System",
+          "desc": { "en": "IoT system collecting environmental sensor data (temperature, humidity) displayed on a dashboard.", "vi": "Hệ thống thu thập dữ liệu cảm biến môi trường (nhiệt độ, độ ẩm) qua IoT và hiển thị trên dashboard." },
+          "tech": "Java, JavaScript, ESP32, Node-RED",
+          "tags": ["2024", "Academic"],
+          "image": "CV_Java_images/project_3.png",
+          "demo": "CV_Java_demos/iot-sensor.html"
+        }
+      ]
+    },
+    "gallery": {
+      "enabled": false,
+      "title": { "en": "Gallery", "vi": "Thư viện" },
+      "subtitle": { "en": "", "vi": "" },
+      "items": []
+    }
+  }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IoT Smart Sensor System - Demo</title>
+    <link rel="stylesheet" href="/CV_master_css/font.css" />
+    <link rel="stylesheet" href="/CV_master_css/main.css" />
+    <script>
+      (function () {
+        var t = localStorage.getItem("cv-theme");
+        if (t) document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script>
+  </head>
+  <body class="demo-page">
+    <header class="demo-header">
+      <div>
+        <a href="/cv.html?id=java" class="demo-back-link">← CV</a>
+        <h1 style="display: inline; margin-left: 1rem;" data-i18n="demo_iot_title">IoT Smart Sensor System</h1>
+      </div>
+      <div class="nav-controls">
+        <div class="lang-toggle">
+          <button class="lang-btn active" data-lang="en" type="button">EN</button>
+          <button class="lang-btn" data-lang="vi" type="button">VI</button>
+        </div>
+        <button class="btn-icon" id="theme-toggle" type="button"><i class="icon-moon" id="theme-icon"></i></button>
+      </div>
+    </header>
+
+    <main class="demo-content">
+      <div class="demo-card">
+        <p><span class="status-dot"></span><span data-i18n="demo_iot_status">ESP32 đang gửi dữ liệu qua MQTT (mô phỏng)</span></p>
+      </div>
+
+      <div class="gauge-grid">
+        <div class="gauge-container demo-card">
+          <h3 data-i18n="demo_temperature">Nhiệt độ</h3>
+          <svg class="gauge-svg" viewBox="0 0 200 110" id="temp-gauge">
+            <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="var(--border-color)" stroke-width="12" stroke-linecap="round"/>
+            <path id="temp-arc" d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="#a50064" stroke-width="12" stroke-linecap="round" stroke-dasharray="251" stroke-dashoffset="251"/>
+          </svg>
+          <div class="gauge-value" id="temp-value">--°C</div>
+        </div>
+        <div class="gauge-container demo-card">
+          <h3 data-i18n="demo_humidity">Độ ẩm</h3>
+          <svg class="gauge-svg" viewBox="0 0 200 110" id="humidity-gauge">
+            <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="var(--border-color)" stroke-width="12" stroke-linecap="round"/>
+            <path id="humidity-arc" d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="#d82d8b" stroke-width="12" stroke-linecap="round" stroke-dasharray="251" stroke-dashoffset="251"/>
+          </svg>
+          <div class="gauge-value" id="humidity-value">--%</div>
+        </div>
+        <div class="gauge-container demo-card">
+          <h3 data-i18n="demo_air_quality">Chất lượng không khí</h3>
+          <svg class="gauge-svg" viewBox="0 0 200 110" id="aqi-gauge">
+            <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="var(--border-color)" stroke-width="12" stroke-linecap="round"/>
+            <path id="aqi-arc" d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="#2ecc71" stroke-width="12" stroke-linecap="round" stroke-dasharray="251" stroke-dashoffset="251"/>
+          </svg>
+          <div class="gauge-value" id="aqi-value">-- AQI</div>
+        </div>
+      </div>
+
+      <div class="demo-card">
+        <h3 data-i18n="demo_sensor_log">Nhật ký cảm biến</h3>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th data-i18n="demo_time">Thời gian</th>
+              <th data-i18n="demo_temperature">Nhiệt độ</th>
+              <th data-i18n="demo_humidity">Độ ẩm</th>
+              <th data-i18n="demo_air_quality">AQI</th>
+              <th data-i18n="demo_status">Trạng thái</th>
+            </tr>
+          </thead>
+          <tbody id="sensor-log"></tbody>
+        </table>
+      </div>
+
+      <div class="demo-card">
+        <h3 data-i18n="demo_json_response">MQTT Payload</h3>
+        <pre class="json-output" id="json-output">{}</pre>
+      </div>
+    </main>
+
+    <script src="/CV_master_js/script.js"></script>
+    <script src="iot-sensor.js"></script>
+  </body>
+</html>

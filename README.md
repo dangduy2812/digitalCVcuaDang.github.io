@@ -1,0 +1,103 @@
+# CV Portfolio Hub
+
+Hệ thống quản lý **nhiều CV** trên một website tĩnh (GitHub Pages). Mỗi CV nằm trong **repo riêng** dưới `repo/repo_CV_<Tên>/` — tách biệt dữ liệu để export và push **1 repo = 1 CV** cho nhà tuyển dụng mà không lộ CV khác.
+
+## Hai tầng kiến trúc
+
+| Tầng | Thư mục | Vai trò |
+|------|---------|---------|
+| **Master (hub)** | `CV_master_*`, `index.html`, `cv.html`, `editor.html` | Quản lý tất cả CV, engine render, editor |
+| **CV repo** | `repo/repo_CV_<Tên>/` | Dữ liệu + media của từng CV, độc lập |
+
+Master **chỉ đọc/ghi** qua `CV_master_registry.json` và thư mục `repo/` — không trộn dữ liệu CV vào engine.
+
+## Trải nghiệm nhanh
+
+| Trang | Vai trò |
+|-------|---------|
+| `index.html` | Hub: liệt kê mọi CV, link sang từng CV và editor |
+| `cv.html?id=<id>` | Render CV từ `repo/repo_CV_<Tên>/cv.json` |
+| `editor.html` | Editor trực quan + Export |
+
+## Cấu trúc thư mục
+
+```
+index.html                  # Hub (giữ ở root — GitHub Pages)
+cv.html
+editor.html
+CV_master_registry.json     # Manifest danh sách CV
+
+CV_master_js/               # Engine hub + render + editor
+CV_master_css/
+CV_master_fonts/
+
+repo/
+  repo_CV_Java/             # ← 1 CV = 1 thư mục repo
+    cv.json
+    CV_Java_images/
+    CV_Java_demos/
+    CV_Java_assets/
+    deploy/                 # Output export (gitignored)
+  repo_CV_<Tên>/            # CV khác — thêm tương tự
+
+scripts/
+  export-standalone.ps1
+archive/                    # File cũ (legacy)
+```
+
+## Quy ước đặt tên
+
+| Thành phần | Quy ước | Ví dụ Java |
+|------------|---------|------------|
+| Thư mục repo | `repo/repo_CV_<PascalCase>` | `repo/repo_CV_Java` |
+| Ảnh | `CV_<Id>_images/` | `CV_Java_images/` |
+| Demo | `CV_<Id>_demos/` | `CV_Java_demos/` |
+| File tải (PDF) | `CV_<Id>_assets/` | `CV_Java_assets/` |
+| ID logic (URL) | slug ngắn | `java` |
+
+## Quản lý tất cả CV (repo master)
+
+1. Mở `editor.html` hoặc **New CV** trên hub.
+2. Nhập **CV ID** (slug, ví dụ `embedded`).
+3. Chỉnh nội dung, bật/tắt section.
+4. **Export CV** → lưu `cv.json` vào `repo/repo_CV_<Id>/cv.json`.
+5. Thêm ảnh/PDF/demo vào `CV_<Id>_images/`, `CV_<Id>_assets/`, `CV_<Id>_demos/`.
+6. **Export registry** → cập nhật `CV_master_registry.json`.
+7. Commit & push repo master (có thể **private**).
+
+## Gửi cho nhà tuyển dụng (1 repo riêng)
+
+```powershell
+.\scripts\export-standalone.ps1 -Id java
+```
+
+Tạo `repo/repo_CV_Java/deploy/` — site độc lập chỉ chứa CV đó + engine render. Push thư mục `deploy/` lên **repo GitHub Pages mới** (public).
+
+Chi tiết: [`repo/repo_CV_Java/README.md`](repo/repo_CV_Java/README.md)
+
+## Đường dẫn trong `cv.json`
+
+Luôn **tương đối** trong thư mục repo CV:
+
+```json
+"avatar": "CV_Java_images/default-avatar.png",
+"cvPdf": "CV_Java_assets/Nguyen-Phan-DuyDang-Software_Engineer.pdf",
+"demo": "CV_Java_demos/vehicle-api.html"
+```
+
+## Chạy thử cục bộ
+
+```bash
+python -m http.server 8000
+# http://localhost:8000
+```
+
+> Cần HTTP server — demo dùng path tuyệt đối `/CV_master_*`.
+
+## GitHub Pages
+
+`index.html`, `cv.html`, `editor.html` giữ ở **thư mục gốc** để GitHub Pages hoạt động mặc định. Nếu sau này gom hub vào subfolder, cần đổi Settings → Pages → folder.
+
+## Schema JSON
+
+Xem `repo/repo_CV_Java/cv.json` làm mẫu. Trường văn bản: chuỗi hoặc `{ "en": "...", "vi": "..." }`.

@@ -1,0 +1,13 @@
+{
+  "cvs": [
+    {
+      "id": "java",
+      "repoFolder": "repo_CV_Java",
+      "title": { "en": "Software Engineer CV", "vi": "CV Software Engineer" },
+      "role": { "en": "Software Engineer", "vi": "Software Engineer" },
+      "accent": "#a50064",
+      "thumbnail": "CV_Java_images/default-avatar.png",
+      "updated": "2026-06-11"
+    }
+  ]
+}

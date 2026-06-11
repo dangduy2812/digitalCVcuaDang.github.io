@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vehicle Profile REST API - Demo</title>
+    <link rel="stylesheet" href="/CV_master_css/font.css" />
+    <link rel="stylesheet" href="/CV_master_css/main.css" />
+    <script>
+      (function () {
+        var t = localStorage.getItem("cv-theme");
+        if (t) document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script>
+  </head>
+  <body class="demo-page">
+    <header class="demo-header">
+      <div>
+        <a href="/cv.html?id=java" class="demo-back-link">← CV</a>
+        <h1 style="display: inline; margin-left: 1rem;" data-i18n="demo_vehicle_title">Vehicle Profile REST API</h1>
+      </div>
+      <div class="nav-controls">
+        <div class="lang-toggle">
+          <button class="lang-btn active" data-lang="en" type="button">EN</button>
+          <button class="lang-btn" data-lang="vi" type="button">VI</button>
+        </div>
+        <button class="btn-icon" id="theme-toggle" type="button"><i class="icon-moon" id="theme-icon"></i></button>
+      </div>
+    </header>
+
+    <main class="demo-content">
+      <div class="demo-card">
+        <h3 data-i18n="demo_vehicle_form">Thêm / Sửa hồ sơ xe</h3>
+        <form id="vehicle-form">
+          <input type="hidden" id="edit-id" />
+          <div class="form-row">
+            <div class="form-group">
+              <label for="vehicle-id" data-i18n="demo_vehicle_id">Mã xe (8 số)</label>
+              <input type="text" id="vehicle-id" maxlength="8" pattern="\d{8}" placeholder="12345678" />
+              <p class="form-error" id="err-id"></p>
+            </div>
+            <div class="form-group">
+              <label for="owner-name" data-i18n="demo_owner_name">Tên chủ xe</label>
+              <input type="text" id="owner-name" placeholder="Nguyen Van A" />
+              <p class="form-error" id="err-name"></p>
+            </div>
+            <div class="form-group">
+              <label for="owner-email" data-i18n="demo_owner_email">Email</label>
+              <input type="email" id="owner-email" placeholder="owner@email.com" />
+              <p class="form-error" id="err-email"></p>
+            </div>
+            <div class="form-group">
+              <label for="vehicle-model" data-i18n="demo_vehicle_model">Model</label>
+              <select id="vehicle-model">
+                <option value="VF8">VinFast VF8</option>
+                <option value="VF9">VinFast VF9</option>
+                <option value="VF5">VinFast VF5</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn-primary-custom" data-i18n="demo_btn_save">Lưu (POST/PUT)</button>
+          <button type="button" class="btn-outline-custom" id="btn-cancel" style="color: var(--momo-pink); border-color: var(--momo-pink); margin-left: 0.5rem; display: none;" data-i18n="demo_btn_cancel">Hủy</button>
+        </form>
+      </div>
+
+      <div class="demo-card">
+        <h3 data-i18n="demo_vehicle_list">Danh sách hồ sơ (GET /api/vehicles)</h3>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th data-i18n="demo_vehicle_id">Mã xe</th>
+              <th data-i18n="demo_owner_name">Tên chủ xe</th>
+              <th data-i18n="demo_owner_email">Email</th>
+              <th data-i18n="demo_vehicle_model">Model</th>
+              <th data-i18n="demo_actions">Thao tác</th>
+            </tr>
+          </thead>
+          <tbody id="vehicle-table-body"></tbody>
+        </table>
+      </div>
+
+      <div class="demo-card">
+        <h3 data-i18n="demo_json_response">JSON Response</h3>
+        <pre class="json-output" id="json-output">{}</pre>
+      </div>
+    </main>
+
+    <script src="/CV_master_js/script.js"></script>
+    <script src="vehicle-api.js"></script>
+  </body>
+</html>

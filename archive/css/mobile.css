@@ -1,0 +1,118 @@
+/* ==================== RESPONSIVE - MOBILE ==================== */
+@media (max-width: 576px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Căn trái */
+    width: 100%;
+    padding: 10px 20px;
+    background: none; /* Xóa nền */
+    border: none; /* Xóa viền */
+    box-shadow: none; /* Xóa hiệu ứng hộp */
+  }
+
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Căn trái */
+    width: 100%;
+  }
+
+  .nav-container-left,
+  .nav-container-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Căn trái */
+    width: 100%;
+    padding: 0 !important;
+  }
+
+  .navbar a {
+    display: block;
+    width: 100%;
+    text-align: left; /* Căn trái */
+    padding: 12px 0;
+    font-size: 18px;
+    text-decoration: none; /* Bỏ gạch chân */
+    background: none; /* Xóa nền */
+    border: none; /* Xóa viền */
+  }
+
+  .navbar a i {
+    margin-right: 8px;
+    font-size: 20px;
+  }
+
+  /* Ẩn hoàn toàn Avatar */
+  .avatar {
+    display: none !important;
+  }
+  /* Căn chỉnh thông tin */
+  /* #info,
+  #personal-info {
+    padding-left: 20px;
+    padding-right: 20px;
+  } */
+  /* Chuyển kinh nghiệm từ 3 cột xuống 1 cột */
+  .resume-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* Chuyển sở thích từ hàng ngang thành dọc */
+  .interests {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .interest-item {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* Chứng chỉ - Giải thưởng */
+  .certificate-list {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-item img {
+    width: 100%;
+    max-height: 200px;
+  }
+  .certificate-list::before {
+    content: none; /* Loại bỏ hoàn toàn nội dung giả */
+  }
+  .certificate-item:nth-child(2) {
+    border-left: none; /* Loại bỏ đường viền bên trái */
+  }
+  .certificate-item {
+    margin: 0 auto; /* Căn giữa hình */
+    border-bottom: 1px solid #d6c08d;
+  }
+  .certificate-item:last-child {
+    border-bottom: none;
+  }
+
+  /* Dự án từ 3 cột xuống 1 cột */
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+
+  .project-image {
+    height: 150px;
+  }
+
+  /* Footer căn giữa icon */
+  .contact-links span {
+    display: none;
+  }
+  .section {
+    padding-left: 50px !important;
+  }
+  /*  */
+  .team-member {
+    text-align: center;
+  }
+  .team-member .digital-icon {
+    justify-content: center;
+  }
+}

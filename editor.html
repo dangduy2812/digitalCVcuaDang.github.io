@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Editor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./CV_master_css/font.css" />
+    <link rel="stylesheet" href="./CV_master_css/main.css" />
+    <script>
+      (function () {
+        var t = localStorage.getItem("cv-theme");
+        if (t) document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="top-bar">
+      <div class="top-bar-inner">
+        <a href="index.html" class="brand">
+          <span class="brand-icon"><i class="icon-code"></i></span>
+          <span class="brand-text">Duy<span class="brand-dot">.</span>Dang</span>
+        </a>
+        <div class="nav-controls">
+          <a href="index.html" class="demo-back-link" data-i18n="back_hub">All CVs</a>
+          <button class="btn-icon" id="theme-toggle" type="button" aria-label="Toggle theme">
+            <i class="icon-moon theme-icon" id="theme-icon"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="editor-layout">
+      <div class="editor-form" id="editor-form">
+        <div class="editor-toolbar">
+          <button class="btn-primary-custom" id="btn-new" type="button">+ New</button>
+          <button class="btn-outline-custom" id="btn-import" type="button" style="color:var(--momo-pink);border-color:var(--momo-pink)">Import JSON</button>
+          <button class="btn-primary-custom" id="btn-export" type="button">Export CV</button>
+          <button class="btn-outline-custom" id="btn-export-manifest" type="button" style="color:var(--momo-pink);border-color:var(--momo-pink)">Export registry</button>
+          <input type="file" id="import-file" accept="application/json" hidden />
+        </div>
+        <p class="editor-hint" id="editor-hint">
+          Điền nội dung bên dưới, xem trước trực tiếp bên phải. Khi xong: bấm
+          <strong>Export CV</strong> → đặt vào <code>repo/repo_CV_&lt;Id&gt;/cv.json</code>,
+          rồi <strong>Export registry</strong> → <code>CV_master_registry.json</code>.
+          Ảnh/PDF/demo: <code>CV_&lt;Id&gt;_images</code>, <code>CV_&lt;Id&gt;_assets</code>, <code>CV_&lt;Id&gt;_demos</code>.
+        </p>
+        <div id="form-sections"></div>
+      </div>
+
+      <div class="editor-preview">
+        <iframe id="preview-frame" src="cv.html?preview=1" title="CV Preview"></iframe>
+      </div>
+    </div>
+
+    <script src="CV_master_js/i18n.js"></script>
+    <script src="CV_master_js/cv-paths.js"></script>
+    <script src="CV_master_js/editor.js"></script>
+  </body>
+</html>
