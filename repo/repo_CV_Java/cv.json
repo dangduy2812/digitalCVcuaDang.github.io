@@ -258,9 +258,46 @@
       "title": { "en": "Certificates", "vi": "Chứng chỉ" },
       "subtitle": { "en": "Achieved certifications", "vi": "Các chứng chỉ đã đạt được" },
       "items": [
-        { "name": "IELTS 6.0", "desc": { "en": "English certificate (equivalent TOEIC 650+) - 2022", "vi": "Chứng chỉ tiếng Anh (tương đương TOEIC 650+) - 2022" }, "image": "CV_Java_images/Cert_DBI.png" },
-        { "name": "MOS Certificate", "desc": { "en": "Word, Excel, PowerPoint - 2019", "vi": "Word, Excel, PowerPoint - 2019" }, "image": "CV_Java_images/Cert_PRF.png" },
-        { "name": "FUNiX Web/App Development", "desc": { "en": "Web & App Development - 2025", "vi": "Phát triển Web & App - 2025" }, "image": "CV_Java_images/Cert_WEB.png" }
+        {
+          "name": "IELTS Academic 6.0 (B2)",
+          "desc": {
+            "en": "British Council / IDP — Academic module, Jun 2022",
+            "vi": "British Council / IDP — Academic, tháng 6/2022"
+          },
+          "image": "CV_Java_images/cert-ielts-academic.jpg"
+        },
+        {
+          "name": "MOS Word 2010",
+          "desc": {
+            "en": "Microsoft Office Specialist — Jun 2019",
+            "vi": "Microsoft Office Specialist — 06/2019"
+          },
+          "image": "CV_Java_images/cert-mos-word-2010.jpg"
+        },
+        {
+          "name": "MOS Excel 2016",
+          "desc": {
+            "en": "Microsoft Office Specialist — Jan 2020",
+            "vi": "Microsoft Office Specialist — 01/2020"
+          },
+          "image": "CV_Java_images/cert-mos-excel-2016.jpg"
+        },
+        {
+          "name": "MOS PowerPoint 2016",
+          "desc": {
+            "en": "Microsoft Office Specialist — Jul 2020",
+            "vi": "Microsoft Office Specialist — 07/2020"
+          },
+          "image": "CV_Java_images/cert-mos-powerpoint-2016.jpg"
+        },
+        {
+          "name": "FUNiX Web/App Development",
+          "desc": {
+            "en": "Web & App Development — 2025",
+            "vi": "Phát triển Web & App — 2025"
+          },
+          "image": "CV_Java_images/cert-funix-web-app.png"
+        }
       ]
     },
     "projects": {
@@ -276,7 +313,7 @@
           },
           "tech": "Java, Spring Boot, Spring Data JPA, MySQL, JUnit 5",
           "tags": ["2025", "Personal"],
-          "image": "CV_Java_images/project_1.png",
+          "image": "CV_Java_images/project-vehicle-telemetry.png",
           "demo": "CV_Java_demos/vehicle-api.html",
           "repo": "https://github.com/dangduy2812/automotive-vehicle-telemetry"
         },
@@ -288,7 +325,7 @@
           },
           "tech": "Java 17, Spring Boot, Spring Kafka, Redis, PostgreSQL, Docker",
           "tags": ["2025-2026", "Personal"],
-          "image": "CV_Java_images/project_2.png",
+          "image": "CV_Java_images/project-telemetry-pipeline.png",
           "demo": "CV_Java_demos/telemetry.html",
           "repo": "https://github.com/dangduy2812/smart-telemetry-pipeline"
         },
@@ -300,7 +337,7 @@
           },
           "tech": "Java, Spring Boot, REST API, H2/MySQL",
           "tags": ["2018-2024", "Study"],
-          "image": "CV_Java_images/project_3.png",
+          "image": "CV_Java_images/project-iot-sensor.png",
           "demo": "CV_Java_demos/iot-sensor.html",
           "repo": "https://github.com/dangduy2812/iot-smart-data"
         }
