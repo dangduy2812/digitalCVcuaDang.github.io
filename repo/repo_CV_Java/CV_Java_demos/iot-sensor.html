@@ -4,20 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IoT Smart Sensor System - Demo</title>
-    <link rel="stylesheet" href="/CV_master_css/font.css" />
-    <link rel="stylesheet" href="/CV_master_css/main.css" />
     <script>
       (function () {
+        var p = location.pathname;
+        var base;
+        if (window.__CV_STANDALONE__ || p.indexOf("/repo/") === -1) {
+          base = p.replace(/\/CV_[^/]+_demos\/[^/]*$/, "/");
+        } else {
+          var i = p.indexOf("/repo/");
+          base = p.substring(0, i + 1);
+        }
+        var el = document.createElement("base");
+        el.href = base;
+        document.head.appendChild(el);
         var t = localStorage.getItem("cv-theme");
         if (t) document.documentElement.setAttribute("data-theme", t);
       })();
     </script>
+    <link rel="stylesheet" href="CV_master_css/font.css" />
+    <link rel="stylesheet" href="CV_master_css/main.css" />
+    <link rel="stylesheet" href="CV_master_css/demo.css" />
   </head>
   <body class="demo-page">
     <header class="demo-header">
-      <div>
-        <a href="/cv.html?id=java" class="demo-back-link">← CV</a>
-        <h1 style="display: inline; margin-left: 1rem;" data-i18n="demo_iot_title">IoT Smart Sensor System</h1>
+      <div class="demo-header-title">
+        <a href="cv.html?id=java" class="demo-back-link">← CV</a>
+        <h1 data-i18n="demo_iot_title">IoT Smart Sensor System</h1>
+        <p class="demo-subtitle" data-i18n="demo_iot_sub">ESP32 · REST Ingestion · Spring Boot</p>
       </div>
       <div class="nav-controls">
         <div class="lang-toggle">
@@ -29,60 +42,91 @@
     </header>
 
     <main class="demo-content">
-      <div class="demo-card">
-        <p><span class="status-dot"></span><span data-i18n="demo_iot_status">ESP32 đang gửi dữ liệu qua MQTT (mô phỏng)</span></p>
+      <section class="demo-hero">
+        <div>
+          <h2 data-i18n="demo_iot_hero">Environmental Monitoring</h2>
+          <p data-i18n="demo_iot_hero_desc">Simulated ESP32 sensor data ingestion</p>
+        </div>
+        <div class="demo-hero-badges">
+          <span class="demo-badge live" data-i18n="demo_live">Live Demo</span>
+          <span class="demo-badge">ESP32-A1B2C3</span>
+        </div>
+      </section>
+
+      <div class="status-bar">
+        <span class="status-dot"></span>
+        <span data-i18n="demo_iot_status">ESP32 sending data via MQTT (simulated)</span>
       </div>
 
-      <div class="gauge-grid">
-        <div class="gauge-container demo-card">
-          <h3 data-i18n="demo_temperature">Nhiệt độ</h3>
-          <svg class="gauge-svg" viewBox="0 0 200 110" id="temp-gauge">
-            <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="var(--border-color)" stroke-width="12" stroke-linecap="round"/>
-            <path id="temp-arc" d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="#a50064" stroke-width="12" stroke-linecap="round" stroke-dasharray="251" stroke-dashoffset="251"/>
-          </svg>
-          <div class="gauge-value" id="temp-value">--°C</div>
-        </div>
-        <div class="gauge-container demo-card">
-          <h3 data-i18n="demo_humidity">Độ ẩm</h3>
-          <svg class="gauge-svg" viewBox="0 0 200 110" id="humidity-gauge">
-            <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="var(--border-color)" stroke-width="12" stroke-linecap="round"/>
-            <path id="humidity-arc" d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="#d82d8b" stroke-width="12" stroke-linecap="round" stroke-dasharray="251" stroke-dashoffset="251"/>
-          </svg>
-          <div class="gauge-value" id="humidity-value">--%</div>
-        </div>
-        <div class="gauge-container demo-card">
-          <h3 data-i18n="demo_air_quality">Chất lượng không khí</h3>
-          <svg class="gauge-svg" viewBox="0 0 200 110" id="aqi-gauge">
-            <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="var(--border-color)" stroke-width="12" stroke-linecap="round"/>
-            <path id="aqi-arc" d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="#2ecc71" stroke-width="12" stroke-linecap="round" stroke-dasharray="251" stroke-dashoffset="251"/>
-          </svg>
-          <div class="gauge-value" id="aqi-value">-- AQI</div>
-        </div>
-      </div>
+      <div class="demo-layout">
+        <div class="demo-main">
+          <div class="gauge-grid">
+            <div class="gauge-container demo-card">
+              <h3 data-i18n="demo_temperature">Temperature</h3>
+              <svg class="gauge-svg" viewBox="0 0 200 110">
+                <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="var(--border-color)" stroke-width="12" stroke-linecap="round"/>
+                <path id="temp-arc" d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="#a50064" stroke-width="12" stroke-linecap="round" stroke-dasharray="251" stroke-dashoffset="251"/>
+              </svg>
+              <div class="gauge-value" id="temp-value">--°C</div>
+            </div>
+            <div class="gauge-container demo-card">
+              <h3 data-i18n="demo_humidity">Humidity</h3>
+              <svg class="gauge-svg" viewBox="0 0 200 110">
+                <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="var(--border-color)" stroke-width="12" stroke-linecap="round"/>
+                <path id="humidity-arc" d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="#d82d8b" stroke-width="12" stroke-linecap="round" stroke-dasharray="251" stroke-dashoffset="251"/>
+              </svg>
+              <div class="gauge-value" id="humidity-value">--%</div>
+            </div>
+            <div class="gauge-container demo-card">
+              <h3 data-i18n="demo_air_quality">Air Quality</h3>
+              <svg class="gauge-svg" viewBox="0 0 200 110">
+                <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="var(--border-color)" stroke-width="12" stroke-linecap="round"/>
+                <path id="aqi-arc" d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="#2ecc71" stroke-width="12" stroke-linecap="round" stroke-dasharray="251" stroke-dashoffset="251"/>
+              </svg>
+              <div class="gauge-value" id="aqi-value">-- AQI</div>
+            </div>
+          </div>
 
-      <div class="demo-card">
-        <h3 data-i18n="demo_sensor_log">Nhật ký cảm biến</h3>
-        <table class="data-table">
-          <thead>
-            <tr>
-              <th data-i18n="demo_time">Thời gian</th>
-              <th data-i18n="demo_temperature">Nhiệt độ</th>
-              <th data-i18n="demo_humidity">Độ ẩm</th>
-              <th data-i18n="demo_air_quality">AQI</th>
-              <th data-i18n="demo_status">Trạng thái</th>
-            </tr>
-          </thead>
-          <tbody id="sensor-log"></tbody>
-        </table>
-      </div>
+          <div class="demo-card">
+            <div class="demo-card-header">
+              <h3 data-i18n="demo_sensor_log">Sensor Log</h3>
+              <span class="pipeline-tag ok">POST /api/sensors/readings</span>
+            </div>
+            <div class="data-table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th data-i18n="demo_time">Time</th>
+                    <th data-i18n="demo_temperature">Temp</th>
+                    <th data-i18n="demo_humidity">Humidity</th>
+                    <th data-i18n="demo_air_quality">AQI</th>
+                    <th data-i18n="demo_status">Status</th>
+                  </tr>
+                </thead>
+                <tbody id="sensor-log"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
 
-      <div class="demo-card">
-        <h3 data-i18n="demo_json_response">MQTT Payload</h3>
-        <pre class="json-output" id="json-output">{}</pre>
+        <aside class="demo-sidebar">
+          <div class="demo-card">
+            <div class="demo-card-header">
+              <h3 data-i18n="demo_json_response">MQTT Payload</h3>
+            </div>
+            <div class="json-panel">
+              <div class="json-panel-header">
+                <div class="json-panel-dots"><span></span><span></span><span></span></div>
+                <span>sensors/environment</span>
+              </div>
+              <pre class="json-output" id="json-output">{}</pre>
+            </div>
+          </div>
+        </aside>
       </div>
     </main>
 
-    <script src="/CV_master_js/script.js"></script>
+    <script src="CV_master_js/script.js"></script>
     <script src="iot-sensor.js"></script>
   </body>
 </html>

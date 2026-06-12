@@ -294,7 +294,9 @@ function renderCV(data, repoFolder) {
     const items = s.projects.items
       .map((p) => {
         const metaTags = (p.tags || []).map((tg) => `<span>${esc(tg)}</span>`).join("");
-        const demo = p.demo ? `<a href="${A(p.demo)}" class="btn-demo" target="_blank">${t("btn_view_demo") || "View Demo"}</a>` : "";
+        const demo = p.demo ? `<a href="${A(p.demo)}" class="btn-demo" target="_blank" rel="noopener">${t("btn_view_demo") || "View Demo"}</a>` : "";
+        const repo = p.repo ? `<a href="${esc(p.repo)}" class="btn-demo btn-source" target="_blank" rel="noopener">${t("btn_view_source") || "Source Code"}</a>` : "";
+        const actions = demo || repo ? `<div class="project-actions">${demo}${repo}</div>` : "";
         return `
         <div class="project-card reveal">
           ${p.image ? `<div class="project-card-img"><img src="${A(p.image)}" alt="${esc(p.name)}" /></div>` : ""}
@@ -303,7 +305,7 @@ function renderCV(data, repoFolder) {
             <div class="project-meta">${metaTags}</div>
             <p>${L(p.desc)}</p>
             ${p.tech ? `<p class="project-tech">${esc(p.tech)}</p>` : ""}
-            ${demo}
+            ${actions}
           </div>
         </div>`;
       })

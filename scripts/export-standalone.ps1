@@ -74,11 +74,17 @@ Get-ChildItem $CvSrc -Directory | Where-Object { $_.Name -ne "deploy" } | ForEac
     Copy-Item $_.FullName (Join-Path $Out $_.Name) -Recurse
 }
 
-# Patch demo HTML for standalone (back link → index.html)
+# Patch demo HTML for standalone (back link → index.html, inject standalone config)
 $utf8NoBom = New-Object System.Text.UTF8Encoding $false
-Get-ChildItem $Out -Recurse -Filter "*.html" | ForEach-Object {
+$demoStandaloneScript = @"
+    <script>window.__CV_STANDALONE__ = { id: "$Id", dataUrl: "cv.json", assetBase: "", repoFolder: "$RepoFolder" };</script>
+"@
+Get-ChildItem $Out -Recurse -Filter "*.html" | Where-Object { $_.DirectoryName -match "_demos" } | ForEach-Object {
     $html = [System.IO.File]::ReadAllText($_.FullName)
-    $html = $html -replace '/cv\.html\?id=[^"]+', '/index.html'
+    if ($html -notmatch '__CV_STANDALONE__') {
+        $html = $html -replace '(</title>\s*)', "`$1$demoStandaloneScript"
+    }
+    $html = $html -replace 'href="cv\.html\?id=[^"]+"', 'href="index.html"'
     [System.IO.File]::WriteAllText($_.FullName, $html, $utf8NoBom)
 }
 

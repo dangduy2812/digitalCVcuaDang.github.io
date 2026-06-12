@@ -16,15 +16,15 @@
     "address": { "en": "2251 Huynh Tan Phat, Nha Be, HCMC", "vi": "2251 Huỳnh Tấn Phát, Nhà Bè, TP.HCM" },
     "facebook": "https://www.facebook.com/dannguyenphanduy",
     "linkedin": "https://www.linkedin.com/in/nguyenphanduydang/",
-    "github": "https://github.com/dang34wdf"
+    "github": "https://github.com/dangduy2812"
   },
   "sections": {
     "about": {
       "enabled": true,
       "title": { "en": "Career Objective", "vi": "Mục tiêu nghề nghiệp" },
       "text": {
-        "en": "A Junior Java Backend Developer with a solid OOP foundation, passionate about building REST APIs with Spring Boot. Eager to learn and grow in a dynamic fintech environment like MoMo, contributing to payment and e-wallet services for millions of users.",
-        "vi": "Là lập trình viên Java Backend Junior với nền tảng OOP vững chắc, đam mê xây dựng REST API và làm việc với Spring Boot. Mong muốn được học hỏi, phát triển trong môi trường fintech năng động như MoMo, đóng góp vào các dịch vụ thanh toán và ví điện tử phục vụ hàng triệu người dùng."
+        "en": "A detail-oriented Software Engineer with a solid foundation in Object-Oriented Programming (OOP), Java Core, and Web Development frameworks. Experienced in developing scalable backend components, implementing layered architectures (MVC), and designing relational databases. Aiming to leverage strong technical troubleshooting and self-study abilities to contribute to high-quality software development within the Java/Spring Boot ecosystem.",
+        "vi": "Kỹ sư phần mềm chú trọng chi tiết với nền tảng vững về Lập trình Hướng đối tượng (OOP), Java Core và các framework Web. Có kinh nghiệm phát triển thành phần backend mở rộng, triển khai kiến trúc phân lớp (MVC) và thiết kế cơ sở dữ liệu quan hệ. Mong muốn tận dụng khả năng xử lý sự cố kỹ thuật và tự học để đóng góp vào phát triển phần mềm chất lượng cao trong hệ sinh thái Java/Spring Boot."
       }
     },
     "experience": {
@@ -37,25 +37,61 @@
           "date": { "en": "Oct 2025 - Present", "vi": "10/2025 - Hiện tại" },
           "current": true,
           "tech": {
-            "en": "Java 17 · Spring Boot · CompletableFuture · ConcurrentHashMap · JSON",
-            "vi": "Java 17 · Spring Boot · CompletableFuture · ConcurrentHashMap · JSON"
+            "en": "Java 17 · Spring Boot · Spring Data JPA · MySQL · REST APIs · CompletableFuture · ExecutorService",
+            "vi": "Java 17 · Spring Boot · Spring Data JPA · MySQL · REST APIs · CompletableFuture · ExecutorService"
           },
           "points": [
             {
-              "en": "Built a high-performance orchestration engine for data streaming, payload parsing & async metadata mediation",
-              "vi": "Xây dựng orchestration engine xử lý data streaming, parse payload & điều phối metadata bất đồng bộ"
+              "en": "Contributed to backend development of a data orchestration module with async request processing, data parsing, and system monitoring workloads",
+              "vi": "Tham gia phát triển backend module điều phối dữ liệu với xử lý request bất đồng bộ, parse dữ liệu và giám sát hệ thống"
             },
             {
-              "en": "Designed Layered Architecture (MVC) with clear separation between Services and data layers",
-              "vi": "Thiết kế kiến trúc phân lớp (MVC), tách biệt rõ Service và tầng dữ liệu"
+              "en": "Implemented maintainable backend components using Layered Architecture (Controller-Service-Repository) following SOLID principles",
+              "vi": "Triển khai thành phần backend dễ bảo trì theo kiến trúc phân lớp (Controller-Service-Repository), tuân thủ nguyên tắc SOLID"
             },
             {
-              "en": "Engineered async workflows with CompletableFuture & ExecutorService; Stream API validation for high-throughput data",
-              "vi": "Xử lý bất đồng bộ với CompletableFuture & ExecutorService; validation bằng Stream API cho luồng dữ liệu lớn"
+              "en": "Utilized CompletableFuture and ExecutorService for background tasks and non-blocking data processing",
+              "vi": "Sử dụng CompletableFuture và ExecutorService cho tác vụ nền và xử lý dữ liệu không chặn"
             },
             {
-              "en": "Optimized memory with ConcurrentHashMap/LinkedBlockingQueue; tuned SQL/Hibernate — reduced DB latency ~25%",
-              "vi": "Tối ưu bộ nhớ với ConcurrentHashMap/LinkedBlockingQueue; tune SQL/Hibernate — giảm độ trễ DB ~25%"
+              "en": "Built data parsing workflows with Stream API & Lambdas; optimized SQL joins and Hibernate LAZY loading to improve API response times",
+              "vi": "Xây dựng pipeline parse dữ liệu với Stream API & Lambda; tối ưu SQL join và Hibernate LAZY loading để cải thiện thời gian phản hồi API"
+            },
+            {
+              "en": "Improved code quality with SonarLint; leveraged ConcurrentHashMap and JSON configs for efficient batch processing",
+              "vi": "Cải thiện chất lượng code với SonarLint; tận dụng ConcurrentHashMap và cấu hình JSON cho xử lý batch hiệu quả"
+            }
+          ]
+        },
+        {
+          "org": "Industrial Environmental Solutions Co., Ltd.",
+          "role": { "en": "Software Engineer", "vi": "Software Engineer" },
+          "date": { "en": "Nov 2024 - Mar 2025", "vi": "11/2024 - 03/2025" },
+          "current": false,
+          "points": [
+            {
+              "en": "Programmed 3D piping model optimizations for industrial environmental projects",
+              "vi": "Lập trình tối ưu mô hình đường ống 3D cho các dự án môi trường công nghiệp"
+            },
+            {
+              "en": "Managed digital databases for final project documentation and deliverables",
+              "vi": "Quản lý cơ sở dữ liệu số cho tài liệu và sản phẩm bàn giao cuối dự án"
+            }
+          ]
+        },
+        {
+          "org": "KTT Investment Group JSC",
+          "role": { "en": "Software Engineer", "vi": "Software Engineer" },
+          "date": { "en": "Mar 2024 - Sep 2024", "vi": "03/2024 - 09/2024" },
+          "current": false,
+          "points": [
+            {
+              "en": "Developed digital tools/models to automate MEP quantity take-offs",
+              "vi": "Phát triển công cụ/mô hình số để tự động hóa dự toán khối lượng MEP"
+            },
+            {
+              "en": "Built tracking tools for construction project progress monitoring",
+              "vi": "Xây dựng công cụ theo dõi tiến độ dự án xây dựng"
             }
           ]
         },
@@ -66,12 +102,24 @@
           "current": false,
           "points": [
             {
-              "en": "Automated disaster compensation claim analysis & report generation",
-              "vi": "Tự động hóa phân tích & sinh báo cáo bồi thường thiên tai"
+              "en": "Built data processing tools to automate analysis and generation of disaster compensation claims",
+              "vi": "Xây dựng công cụ xử lý dữ liệu tự động hóa phân tích và sinh hồ sơ bồi thường thiên tai"
+            }
+          ]
+        },
+        {
+          "org": "TID Company Ltd.",
+          "role": { "en": "Software Engineer", "vi": "Software Engineer" },
+          "date": { "en": "Apr 2022 - Aug 2022", "vi": "04/2022 - 08/2022" },
+          "current": false,
+          "points": [
+            {
+              "en": "Developed automation scripts for CAD workflows",
+              "vi": "Phát triển script tự động hóa quy trình CAD"
             },
             {
-              "en": "Processed Excel/CSV datasets with SQL for insurance workflows",
-              "vi": "Xử lý dữ liệu Excel/CSV kết hợp SQL cho quy trình bảo hiểm"
+              "en": "Programmed configurations for electrical control systems",
+              "vi": "Lập trình cấu hình cho hệ thống điều khiển điện"
             }
           ]
         }
@@ -86,35 +134,8 @@
           "date": { "en": "Oct 2018 - Feb 2024", "vi": "10/2018 - 02/2024" },
           "current": false,
           "points": [
-            { "en": "Major: Control Engineering & Automation", "vi": "Ngành: Kỹ thuật Điều khiển & Tự động hóa" },
-            { "en": "GPA: 7.8/10 (Good)", "vi": "GPA: 7.8/10 (Khá)" },
-            {
-              "en": "Strong foundation in logic, algorithms, and real-time control systems",
-              "vi": "Nền tảng vững về logic, thuật toán và hệ thống điều khiển thời gian thực"
-            },
-            {
-              "en": "Capstone & lab projects involving data acquisition, sensors & automation pipelines",
-              "vi": "Đồ án & thực hành về thu thập dữ liệu, cảm biến và pipeline tự động hóa"
-            }
-          ]
-        },
-        {
-          "org": { "en": "FUNiX Online", "vi": "FUNiX Online" },
-          "date": { "en": "2025", "vi": "2025" },
-          "current": false,
-          "points": [
-            {
-              "en": "Web Development Foundations — HTML, CSS, JavaScript & responsive UI basics",
-              "vi": "Web Development Foundations — HTML, CSS, JavaScript & UI responsive cơ bản"
-            },
-            {
-              "en": "Automotive Embedded Systems — IoT concepts, real-time data & embedded fundamentals",
-              "vi": "Automotive Embedded Systems — IoT, dữ liệu thời gian thực & nền tảng nhúng"
-            },
-            {
-              "en": "Self-paced learning aligned with modern software engineering practices",
-              "vi": "Tự học theo hướng thực hành, bám sát quy trình phát triển phần mềm hiện đại"
-            }
+            { "en": "Major: Automation Engineer", "vi": "Ngành: Kỹ sư Tự động hóa" },
+            { "en": "GPA: 7.8/10 (Good)", "vi": "GPA: 7.8/10 (Khá)" }
           ]
         }
       ]
@@ -126,7 +147,7 @@
         {
           "label": { "en": "Programming Languages", "vi": "Ngôn ngữ lập trình" },
           "items": [
-            "Java (Core, Stream API, Multithreading)",
+            "Java (Core, Functional Programming/Stream API, Multithreading/Concurrency)",
             "C/C++",
             "SQL",
             "JavaScript"
@@ -134,18 +155,18 @@
         },
         {
           "label": { "en": "Scripting & Automation", "vi": "Scripting & Tự động hóa" },
-          "items": ["Python (workflow automation & data parsing)"]
+          "items": ["Python (Basic workflow automation & data parsing)"]
         },
         {
           "label": { "en": "Tools & DevOps", "vi": "Công cụ & DevOps" },
-          "items": ["Docker", "Git/GitHub", "Linux/Ubuntu", "VS Code", "File I/O"]
+          "items": ["Docker", "Git/GitHub", "Linux/Ubuntu", "VS Code", "File I/O handling"]
         },
         {
           "label": { "en": "Databases & Storage", "vi": "Cơ sở dữ liệu & Lưu trữ" },
           "items": [
             "MySQL (Schema design, Query optimization)",
-            "JSON persistence",
-            "Redis (Caching)"
+            "JSON local persistence",
+            "Redis (Basic Caching concepts)"
           ]
         },
         {
@@ -155,8 +176,15 @@
             "Spring MVC",
             "Spring Data JPA",
             "Hibernate",
-            "Layered Architecture / MVC",
+            "Layered Architecture",
+            "MVC",
             "OOP / SOLID"
+          ]
+        },
+        {
+          "label": { "en": "AI & Productivity", "vi": "AI & Năng suất" },
+          "items": [
+            "Cursor AI, Claude — debugging, documentation, Java coding standards (SonarLint)"
           ]
         }
       ],
@@ -192,51 +220,35 @@
       "title": { "en": "Interests", "vi": "Sở thích" },
       "items": [
         {
-          "icon": "ic-puzzle",
-          "label": { "en": "Open Source & Side Projects", "vi": "Open Source & Dự án cá nhân" },
+          "icon": "ic-hotairballoon",
+          "label": { "en": "Gym", "vi": "Gym" },
           "desc": {
-            "en": "Build backend side projects and explore open-source repos to sharpen production-ready coding habits.",
-            "vi": "Xây dựng dự án backend cá nhân và đóng góp open-source để rèn thói quen code sẵn sàng production."
-          }
-        },
-        {
-          "icon": "ic-book-open",
-          "label": { "en": "System Design & Tech Reading", "vi": "System Design & Đọc sách kỹ thuật" },
-          "desc": {
-            "en": "Study scalable architecture patterns, distributed systems & engineering blogs from top tech companies.",
-            "vi": "Tìm hiểu kiến trúc mở rộng, hệ thống phân tán và blog kỹ thuật từ các công ty công nghệ hàng đầu."
+            "en": "Regular fitness training to stay disciplined and maintain energy for work.",
+            "vi": "Tập luyện thường xuyên để duy trì kỷ luật và năng lượng cho công việc."
           }
         },
         {
           "icon": "ic-strategy",
-          "label": { "en": "Algorithm & Problem Solving", "vi": "Thuật toán & Giải quyết vấn đề" },
+          "label": { "en": "Running", "vi": "Chạy bộ" },
           "desc": {
-            "en": "Regular practice on LeetCode/HackerRank to strengthen logic and interview readiness.",
-            "vi": "Luyện tập thường xuyên trên LeetCode/HackerRank để củng cố tư duy logic và chuẩn bị phỏng vấn."
+            "en": "Outdoor running for health and mental clarity.",
+            "vi": "Chạy bộ ngoài trời để giữ sức khỏe và tinh thần minh mẫn."
           }
         },
         {
           "icon": "ic-megaphone",
-          "label": { "en": "Developer Communities", "vi": "Cộng đồng lập trình viên" },
+          "label": { "en": "Music", "vi": "Âm nhạc" },
           "desc": {
-            "en": "Join meetups & online forums to exchange ideas, learn best practices and grow professional network.",
-            "vi": "Tham gia meetup & diễn đàn trực tuyến để trao đổi kinh nghiệm, học best practice và mở rộng network."
+            "en": "Listening to music to relax and recharge after coding sessions.",
+            "vi": "Nghe nhạc để thư giãn và nạp năng lượng sau khi code."
           }
         },
         {
-          "icon": "ic-lightbulb",
-          "label": { "en": "AI Tools & Productivity", "vi": "Công cụ AI & Năng suất" },
+          "icon": "ic-book-open",
+          "label": { "en": "Traveling", "vi": "Du lịch" },
           "desc": {
-            "en": "Leverage AI assistants for debugging, documentation & code quality — boosting delivery efficiency.",
-            "vi": "Ứng dụng AI hỗ trợ debug, viết tài liệu và chất lượng code — tăng hiệu suất làm việc."
-          }
-        },
-        {
-          "icon": "ic-hotairballoon",
-          "label": { "en": "Gym & Wellness", "vi": "Gym & Sức khỏe" },
-          "desc": {
-            "en": "Stay disciplined through fitness — maintaining focus, energy and resilience under project pressure.",
-            "vi": "Duy trì kỷ luật qua tập luyện — giữ tập trung, năng lượng và sức bền khi áp lực dự án."
+            "en": "Exploring new places and cultures during free time.",
+            "vi": "Khám phá địa điểm và văn hóa mới trong thời gian rảnh."
           }
         }
       ]
@@ -246,39 +258,51 @@
       "title": { "en": "Certificates", "vi": "Chứng chỉ" },
       "subtitle": { "en": "Achieved certifications", "vi": "Các chứng chỉ đã đạt được" },
       "items": [
-        { "name": "IELTS 6.0", "desc": { "en": "English certificate - IDP (equivalent TOEIC 650+)", "vi": "Chứng chỉ tiếng Anh - IDP (tương đương TOEIC 650+)" }, "image": "CV_Java_images/Cert_DBI.png" },
+        { "name": "IELTS 6.0", "desc": { "en": "English certificate (equivalent TOEIC 650+) - 2022", "vi": "Chứng chỉ tiếng Anh (tương đương TOEIC 650+) - 2022" }, "image": "CV_Java_images/Cert_DBI.png" },
         { "name": "MOS Certificate", "desc": { "en": "Word, Excel, PowerPoint - 2019", "vi": "Word, Excel, PowerPoint - 2019" }, "image": "CV_Java_images/Cert_PRF.png" },
-        { "name": "FUNiX Web Development", "desc": { "en": "HTML, CSS, JavaScript - 2025", "vi": "HTML, CSS, JavaScript - 2025" }, "image": "CV_Java_images/Cert_WEB.png" }
+        { "name": "FUNiX Web/App Development", "desc": { "en": "Web & App Development - 2025", "vi": "Phát triển Web & App - 2025" }, "image": "CV_Java_images/Cert_WEB.png" }
       ]
     },
     "projects": {
       "enabled": true,
       "title": { "en": "Projects", "vi": "Dự án" },
-      "subtitle": { "en": "Personal & academic projects", "vi": "Các dự án cá nhân & học tập" },
+      "subtitle": { "en": "Personal & study projects", "vi": "Các dự án cá nhân & học tập" },
       "items": [
         {
-          "name": "Vehicle Profile REST API",
-          "desc": { "en": "REST API system for managing vehicle profiles and telemetry settings. Built with Spring Boot, JPA, MySQL with input validation.", "vi": "Hệ thống REST API quản lý hồ sơ xe và cài đặt telemetry. Sử dụng Spring Boot, JPA, MySQL với validation đầu vào." },
-          "tech": "Java, Spring Boot, JPA, MySQL",
+          "name": "Automotive Vehicle Profile & Telemetry Management",
+          "desc": {
+            "en": "RESTful backend to manage vehicle profiles and process simulated telemetry data (speed, temperature, fuel). CRUD APIs, JPA persistence, and JUnit 5 unit tests.",
+            "vi": "Backend RESTful quản lý hồ sơ xe và xử lý dữ liệu telemetry mô phỏng (tốc độ, nhiệt độ, nhiên liệu). API CRUD, lưu trữ JPA và unit test JUnit 5."
+          },
+          "tech": "Java, Spring Boot, Spring Data JPA, MySQL, JUnit 5",
           "tags": ["2025", "Personal"],
           "image": "CV_Java_images/project_1.png",
-          "demo": "CV_Java_demos/vehicle-api.html"
+          "demo": "CV_Java_demos/vehicle-api.html",
+          "repo": "https://github.com/dangduy2812/automotive-vehicle-telemetry"
         },
         {
-          "name": "Vehicle Telemetry Dashboard",
-          "desc": { "en": "Real-time dashboard monitoring vehicle telemetry data (speed, temperature, fuel level).", "vi": "Dashboard theo dõi dữ liệu telemetry xe (tốc độ, nhiệt độ, nhiên liệu) cập nhật theo thời gian thực." },
-          "tech": "Java, Spring Boot, Redis, PostgreSQL",
-          "tags": ["2025", "Personal"],
+          "name": "Smart Vehicle Telemetry & Notification Pipeline",
+          "desc": {
+            "en": "Backend data pipeline to ingest and process vehicle telemetry streams. Spring Kafka for async messaging, Redis caching for latest vehicle state, Docker Compose for local setup.",
+            "vi": "Pipeline backend thu nhận và xử lý luồng telemetry xe. Spring Kafka cho messaging bất đồng bộ, Redis cache trạng thái xe mới nhất, Docker Compose cho môi trường local."
+          },
+          "tech": "Java 17, Spring Boot, Spring Kafka, Redis, PostgreSQL, Docker",
+          "tags": ["2025-2026", "Personal"],
           "image": "CV_Java_images/project_2.png",
-          "demo": "CV_Java_demos/telemetry.html"
+          "demo": "CV_Java_demos/telemetry.html",
+          "repo": "https://github.com/dangduy2812/smart-telemetry-pipeline"
         },
         {
-          "name": "IoT Smart Sensor System",
-          "desc": { "en": "IoT system collecting environmental sensor data (temperature, humidity) displayed on a dashboard.", "vi": "Hệ thống thu thập dữ liệu cảm biến môi trường (nhiệt độ, độ ẩm) qua IoT và hiển thị trên dashboard." },
-          "tech": "Java, JavaScript, ESP32, Node-RED",
-          "tags": ["2024", "Academic"],
+          "name": "Automated IoT Smart Data System",
+          "desc": {
+            "en": "IoT monitoring backend that receives simulated sensor payloads (temperature, humidity), validates input, and persists readings to a relational database.",
+            "vi": "Backend giám sát IoT nhận payload cảm biến mô phỏng (nhiệt độ, độ ẩm), validate đầu vào và lưu dữ liệu vào cơ sở dữ liệu quan hệ."
+          },
+          "tech": "Java, Spring Boot, REST API, H2/MySQL",
+          "tags": ["2018-2024", "Study"],
           "image": "CV_Java_images/project_3.png",
-          "demo": "CV_Java_demos/iot-sensor.html"
+          "demo": "CV_Java_demos/iot-sensor.html",
+          "repo": "https://github.com/dangduy2812/iot-smart-data"
         }
       ]
     },

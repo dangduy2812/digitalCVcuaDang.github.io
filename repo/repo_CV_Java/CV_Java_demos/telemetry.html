@@ -3,21 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vehicle Telemetry Dashboard - Demo</title>
-    <link rel="stylesheet" href="/CV_master_css/font.css" />
-    <link rel="stylesheet" href="/CV_master_css/main.css" />
+    <title>Vehicle Telemetry Pipeline - Demo</title>
     <script>
       (function () {
+        var p = location.pathname;
+        var base;
+        if (window.__CV_STANDALONE__ || p.indexOf("/repo/") === -1) {
+          base = p.replace(/\/CV_[^/]+_demos\/[^/]*$/, "/");
+        } else {
+          var i = p.indexOf("/repo/");
+          base = p.substring(0, i + 1);
+        }
+        var el = document.createElement("base");
+        el.href = base;
+        document.head.appendChild(el);
         var t = localStorage.getItem("cv-theme");
         if (t) document.documentElement.setAttribute("data-theme", t);
       })();
     </script>
+    <link rel="stylesheet" href="CV_master_css/font.css" />
+    <link rel="stylesheet" href="CV_master_css/main.css" />
+    <link rel="stylesheet" href="CV_master_css/demo.css" />
   </head>
   <body class="demo-page">
     <header class="demo-header">
-      <div>
-        <a href="/cv.html?id=java" class="demo-back-link">← CV</a>
-        <h1 style="display: inline; margin-left: 1rem;" data-i18n="demo_telemetry_title">Vehicle Telemetry Dashboard</h1>
+      <div class="demo-header-title">
+        <a href="cv.html?id=java" class="demo-back-link">← CV</a>
+        <h1 data-i18n="demo_telemetry_title">Smart Telemetry Pipeline</h1>
+        <p class="demo-subtitle" data-i18n="demo_telemetry_sub">Kafka · Redis · Spring Boot</p>
       </div>
       <div class="nav-controls">
         <div class="lang-toggle">
@@ -29,45 +42,81 @@
     </header>
 
     <main class="demo-content">
-      <div class="demo-card">
-        <p><span class="status-dot"></span><span data-i18n="demo_telemetry_status">Đang nhận dữ liệu real-time (mô phỏng Kafka stream)</span></p>
+      <section class="demo-hero">
+        <div>
+          <h2 data-i18n="demo_telemetry_hero">Real-time Telemetry Monitor</h2>
+          <p data-i18n="demo_telemetry_hero_desc">Simulated Kafka stream with Redis cache</p>
+        </div>
+        <div class="demo-hero-badges">
+          <span class="demo-badge live" data-i18n="demo_streaming">Streaming</span>
+          <span class="demo-badge" id="vehicle-badge">VF8-12345678</span>
+        </div>
+      </section>
+
+      <div class="status-bar">
+        <span class="status-dot"></span>
+        <span data-i18n="demo_telemetry_status">Receiving real-time data (simulated Kafka stream)</span>
       </div>
 
-      <div class="metrics-grid">
-        <div class="metric-card">
-          <div class="metric-value" id="speed-value">0</div>
-          <div class="metric-unit">km/h</div>
-          <div class="metric-label" data-i18n="demo_speed">Tốc độ</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-value" id="temp-value">0</div>
-          <div class="metric-unit">°C</div>
-          <div class="metric-label" data-i18n="demo_temp">Nhiệt độ động cơ</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-value" id="fuel-value">0</div>
-          <div class="metric-unit">%</div>
-          <div class="metric-label" data-i18n="demo_fuel">Mức nhiên liệu</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-value" id="rpm-value">0</div>
-          <div class="metric-unit">RPM</div>
-          <div class="metric-label" data-i18n="demo_rpm">Vòng quay</div>
-        </div>
+      <div class="pipeline-tags" style="margin: 1rem 0 1.5rem;">
+        <span class="pipeline-tag ok">Kafka: Connected</span>
+        <span class="pipeline-tag ok">Redis: Cache Hit</span>
+        <span class="pipeline-tag">PostgreSQL: Standby</span>
+        <span class="pipeline-tag">Docker: Running</span>
       </div>
 
-      <div class="demo-card">
-        <h3 data-i18n="demo_chart_title">Biểu đồ tốc độ (60 giây gần nhất)</h3>
-        <canvas id="speed-chart" class="chart-canvas"></canvas>
-      </div>
+      <div class="demo-layout">
+        <div class="demo-main">
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <div class="metric-value" id="speed-value">0</div>
+              <div class="metric-unit">km/h</div>
+              <div class="metric-label" data-i18n="demo_speed">Speed</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-value" id="temp-value">0</div>
+              <div class="metric-unit">°C</div>
+              <div class="metric-label" data-i18n="demo_temp">Engine Temp</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-value" id="fuel-value">0</div>
+              <div class="metric-unit">%</div>
+              <div class="metric-label" data-i18n="demo_fuel">Fuel Level</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-value" id="rpm-value">0</div>
+              <div class="metric-unit">RPM</div>
+              <div class="metric-label" data-i18n="demo_rpm">RPM</div>
+            </div>
+          </div>
 
-      <div class="demo-card">
-        <h3 data-i18n="demo_json_response">Latest Kafka Message</h3>
-        <pre class="json-output" id="json-output">{}</pre>
+          <div class="demo-card">
+            <div class="demo-card-header">
+              <h3 data-i18n="demo_chart_title">Speed Chart (last 60s)</h3>
+              <span class="pipeline-tag" id="msg-count">0 msgs</span>
+            </div>
+            <canvas id="speed-chart" class="chart-canvas"></canvas>
+          </div>
+        </div>
+
+        <aside class="demo-sidebar">
+          <div class="demo-card">
+            <div class="demo-card-header">
+              <h3 data-i18n="demo_json_response">Latest Kafka Message</h3>
+            </div>
+            <div class="json-panel">
+              <div class="json-panel-header">
+                <div class="json-panel-dots"><span></span><span></span><span></span></div>
+                <span>vehicle.telemetry</span>
+              </div>
+              <pre class="json-output" id="json-output">{}</pre>
+            </div>
+          </div>
+        </aside>
       </div>
     </main>
 
-    <script src="/CV_master_js/script.js"></script>
+    <script src="CV_master_js/script.js"></script>
     <script src="telemetry.js"></script>
   </body>
 </html>

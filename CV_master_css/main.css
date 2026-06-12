@@ -999,7 +999,7 @@ img {
 /* ===== Projects ===== */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 
@@ -1098,6 +1098,28 @@ img {
   background: var(--momo-pink-light);
   color: white;
   transform: translateY(-2px);
+}
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-actions .btn-demo {
+  width: auto;
+  flex: 1 1 auto;
+}
+
+.project-actions .btn-source {
+  background: transparent;
+  color: var(--momo-pink);
+  border: 2px solid var(--momo-pink);
+}
+
+.project-actions .btn-source:hover {
+  background: var(--momo-pink);
+  color: white;
 }
 
 /* ===== Footer ===== */
