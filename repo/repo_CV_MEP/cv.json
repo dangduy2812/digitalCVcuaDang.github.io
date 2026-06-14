@@ -1,0 +1,476 @@
+{
+  "id": "mep",
+  "meta": {
+    "name": "Nguyễn Phan Duy Đăng",
+    "role": {
+      "en": "Automation / Electrical / MEP Engineer",
+      "vi": "Kỹ sư Tự động hóa / Điện / MEP"
+    },
+    "accent": "#0f766e",
+    "avatar": "https://images.unsplash.com/photo-1759692071712-adc78a8516c8?auto=format&fit=crop&w=900&q=80",
+    "cvPdf": "https://dangduy2812.github.io/digitalCVcuaDang.github.io/Nguyen-Phan-DuyDang_MEP_Engineer.pdf",
+    "tags": ["MEP", "Electrical", "AutoCAD", "PLC/SCADA", "Quantity Take-off"]
+  },
+  "contact": {
+    "gender": { "en": "Male", "vi": "Nam" },
+    "dob": "28/12/2000",
+    "phone": "0901075805",
+    "email": "dangnguyenphanduy@gmail.com",
+    "address": {
+      "en": "2251 Huynh Tan Phat, Nha Be, Ho Chi Minh City",
+      "vi": "2251 Huỳnh Tấn Phát, Nhà Bè, TP.HCM"
+    },
+    "linkedin": "https://www.linkedin.com/in/nguyenphanduydang/",
+    "github": "https://github.com/dangduy2812"
+  },
+  "sections": {
+    "about": {
+      "enabled": true,
+      "title": {
+        "en": "Career Objective",
+        "vi": "Mục tiêu nghề nghiệp"
+      },
+      "text": {
+        "en": "Automation, Electrical and MEP Engineer with a background in Control Engineering and Automation. Experienced in shop drawings, MEP quantity take-off, site surveys, electrical/control panel installation, PLC/SCADA study projects, and technical loss assessment for equipment and building systems. Seeking to grow into a strong MEP/automation engineer capable of design coordination, site execution, commissioning support, and technical documentation.",
+        "vi": "Kỹ sư Tự động hóa, Điện và MEP với nền tảng Kỹ thuật Điều khiển và Tự động hóa. Có kinh nghiệm triển khai shop drawing, bóc tách khối lượng MEP, khảo sát công trường, lắp đặt hệ thống điện/tủ điều khiển, dự án học tập PLC/SCADA và đánh giá tổn thất kỹ thuật cho thiết bị, hệ thống công trình. Định hướng phát triển thành kỹ sư MEP/tự động hóa vững chuyên môn, có thể tham gia phối hợp thiết kế, thi công hiện trường, hỗ trợ nghiệm thu/chạy thử và lập hồ sơ kỹ thuật."
+      }
+    },
+    "experience": {
+      "enabled": true,
+      "sectionTitle": {
+        "en": "MEP Experience & Skills",
+        "vi": "Kinh nghiệm MEP & Kỹ năng"
+      },
+      "title": {
+        "en": "Work Experience",
+        "vi": "Kinh nghiệm làm việc"
+      },
+      "items": [
+        {
+          "org": "Industrial Environmental Solutions Co., Ltd.",
+          "role": {
+            "en": "Technician",
+            "vi": "Kỹ thuật viên"
+          },
+          "date": {
+            "en": "Nov 2024 - Mar 2025",
+            "vi": "11/2024 - 03/2025"
+          },
+          "current": false,
+          "tech": {
+            "en": "AutoCAD 2D/3D · P&ID · Piping · Storage Tanks · Site Survey",
+            "vi": "AutoCAD 2D/3D · P&ID · Đường ống · Bồn chứa · Khảo sát hiện trường"
+          },
+          "points": [
+            {
+              "en": "Prepared shop drawings based on project requirements and updated drawings from actual site measurements.",
+              "vi": "Triển khai shop drawing theo yêu cầu dự án và cập nhật bản vẽ dựa trên đo đạc thực tế tại công trường."
+            },
+            {
+              "en": "Conducted site surveys, collected field data, and compiled final drawing packages for project documentation.",
+              "vi": "Khảo sát công trường, thu thập dữ liệu hiện trường và tổng hợp bộ bản vẽ hoàn công/tài liệu dự án."
+            },
+            {
+              "en": "Designed piping layouts, storage tank details, and 3D models to support fabrication preparation.",
+              "vi": "Thiết kế layout đường ống, chi tiết bồn chứa và mô hình 3D phục vụ chuẩn bị gia công."
+            }
+          ]
+        },
+        {
+          "org": "KTT Investment Group Joint Stock Company",
+          "role": {
+            "en": "MEP Technician",
+            "vi": "Kỹ thuật viên MEP"
+          },
+          "date": {
+            "en": "Mar 2024 - Sep 2024",
+            "vi": "03/2024 - 09/2024"
+          },
+          "current": false,
+          "tech": {
+            "en": "MEP Shop Drawings · HVAC · Electrical · ELV · Plumbing · Quantity Take-off",
+            "vi": "Shop drawing MEP · HVAC · Điện · ELV · Cấp thoát nước · Bóc tách khối lượng"
+          },
+          "points": [
+            {
+              "en": "Developed shop drawings and performed quantity take-off for HVAC, electrical, ELV, and plumbing systems.",
+              "vi": "Triển khai shop drawing và bóc tách khối lượng cho hệ HVAC, điện, ELV và cấp thoát nước."
+            },
+            {
+              "en": "Reviewed design and tender documents, tracked site progress, and checked executed quantities against approved drawings.",
+              "vi": "Rà soát hồ sơ thiết kế/hồ sơ thầu, theo dõi tiến độ thi công và kiểm tra khối lượng thực hiện theo bản vẽ được duyệt."
+            },
+            {
+              "en": "Supported construction quality control to ensure work aligned with project specifications and contract requirements.",
+              "vi": "Hỗ trợ kiểm soát chất lượng thi công, đảm bảo phù hợp thông số kỹ thuật và yêu cầu hợp đồng."
+            }
+          ]
+        },
+        {
+          "org": "Northstar Adjuster Joint Stock Company",
+          "role": {
+            "en": "Loss Adjuster",
+            "vi": "Chuyên viên giám định tổn thất"
+          },
+          "date": {
+            "en": "Nov 2023 - May 2024",
+            "vi": "11/2023 - 05/2024"
+          },
+          "current": false,
+          "tech": {
+            "en": "Damage Assessment · Technical Reports · Solar Panels · Pumps · Inverters",
+            "vi": "Giám định tổn thất · Báo cáo kỹ thuật · Tấm pin mặt trời · Bơm · Biến tần"
+          },
+          "points": [
+            {
+              "en": "Assessed damage to structures and technical equipment including inverters, pumps, solar panels, and building systems.",
+              "vi": "Đánh giá tổn thất công trình và thiết bị kỹ thuật như biến tần, bơm, tấm pin mặt trời và hệ thống tòa nhà."
+            },
+            {
+              "en": "Collected evidence, took photos, verified claims with clients and insurance representatives, and prepared compensation reports.",
+              "vi": "Thu thập bằng chứng, chụp ảnh hiện trường, xác minh hồ sơ với khách hàng/đại diện bảo hiểm và lập báo cáo bồi thường."
+            },
+            {
+              "en": "Collaborated with engineers and stakeholders to improve accuracy of technical damage evaluation.",
+              "vi": "Phối hợp với kỹ sư và các bên liên quan để nâng cao độ chính xác của đánh giá tổn thất kỹ thuật."
+            }
+          ]
+        },
+        {
+          "org": "TID Company Limited",
+          "role": {
+            "en": "Intern",
+            "vi": "Thực tập sinh"
+          },
+          "date": {
+            "en": "Apr 2022 - Aug 2022",
+            "vi": "04/2022 - 08/2022"
+          },
+          "current": false,
+          "tech": {
+            "en": "Electrical Wiring · Control Panels · CCTV · Access Control · CAD",
+            "vi": "Đi dây điện · Tủ điều khiển · CCTV · Kiểm soát cửa · CAD"
+          },
+          "points": [
+            {
+              "en": "Worked with radio station amplification systems, transceivers, cameras, CCTV, and access control devices.",
+              "vi": "Làm việc với hệ thống khuếch đại trạm radio, bộ thu phát, camera, CCTV và thiết bị kiểm soát cửa."
+            },
+            {
+              "en": "Read technical drawings, supported CAD drawings and quantity take-off, and installed electrical wiring for control panels.",
+              "vi": "Đọc bản vẽ kỹ thuật, hỗ trợ bản vẽ CAD/bóc tách khối lượng và lắp đặt dây điện cho tủ điều khiển."
+            },
+            {
+              "en": "Installed and configured low-voltage electrical devices at project sites.",
+              "vi": "Lắp đặt và cấu hình thiết bị điện hạ áp tại công trình."
+            }
+          ]
+        }
+      ]
+    },
+    "education": {
+      "enabled": true,
+      "title": {
+        "en": "Education",
+        "vi": "Học vấn"
+      },
+      "items": [
+        {
+          "org": {
+            "en": "Ton Duc Thang University",
+            "vi": "Đại học Tôn Đức Thắng"
+          },
+          "date": {
+            "en": "Oct 2018 - Feb 2024",
+            "vi": "10/2018 - 02/2024"
+          },
+          "current": false,
+          "points": [
+            {
+              "en": "Major: Control Engineering and Automation",
+              "vi": "Ngành: Kỹ thuật Điều khiển và Tự động hóa"
+            },
+            {
+              "en": "Academic achievement: Good",
+              "vi": "Xếp loại học tập: Khá"
+            }
+          ]
+        }
+      ]
+    },
+    "skills": {
+      "enabled": true,
+      "title": {
+        "en": "Technical Skills",
+        "vi": "Kỹ năng chuyên môn"
+      },
+      "groups": [
+        {
+          "label": {
+            "en": "MEP & Site Engineering",
+            "vi": "MEP & Kỹ thuật công trường"
+          },
+          "items": [
+            "MEP shop drawings",
+            "Quantity take-off",
+            "HVAC, Electrical, ELV, Plumbing",
+            "Construction progress tracking",
+            "Site survey & field measurement"
+          ]
+        },
+        {
+          "label": {
+            "en": "Electrical & Automation",
+            "vi": "Điện & Tự động hóa"
+          },
+          "items": [
+            "Control panel wiring",
+            "Low-voltage electrical devices",
+            "PLC fundamentals",
+            "SCADA fundamentals",
+            "Sensors and IoT monitoring"
+          ]
+        },
+        {
+          "label": {
+            "en": "Design Software",
+            "vi": "Phần mềm thiết kế"
+          },
+          "items": [
+            "AutoCAD 2D/3D",
+            "P&ID",
+            "Siemens TIA Portal V16",
+            "MATLAB/Simulink",
+            "Microsoft Excel"
+          ]
+        },
+        {
+          "label": {
+            "en": "Technical Documentation",
+            "vi": "Hồ sơ kỹ thuật"
+          },
+          "items": [
+            "Technical drawing reading",
+            "Final drawing packages",
+            "Damage assessment reports",
+            "Tender/design document review",
+            "Evidence collection and reporting"
+          ]
+        }
+      ],
+      "soft": {
+        "label": {
+          "en": "Soft Skills",
+          "vi": "Kỹ năng mềm"
+        },
+        "items": [
+          {
+            "title": {
+              "en": "Teamwork & Communication",
+              "vi": "Làm việc nhóm & Giao tiếp"
+            },
+            "text": {
+              "en": "Able to coordinate with site teams, clients, supervisors, and insurance representatives.",
+              "vi": "Có khả năng phối hợp với đội hiện trường, khách hàng, cấp quản lý và đại diện bảo hiểm."
+            }
+          },
+          {
+            "title": {
+              "en": "Analytical Thinking",
+              "vi": "Tư duy phân tích"
+            },
+            "text": {
+              "en": "Experienced in analyzing technical drawings, field conditions, losses, and project quantities.",
+              "vi": "Có kinh nghiệm phân tích bản vẽ kỹ thuật, điều kiện hiện trường, tổn thất và khối lượng dự án."
+            }
+          },
+          {
+            "title": {
+              "en": "Problem Solving",
+              "vi": "Giải quyết vấn đề"
+            },
+            "text": {
+              "en": "Comfortable troubleshooting technical issues and updating documentation from real site constraints.",
+              "vi": "Có khả năng xử lý vấn đề kỹ thuật và cập nhật hồ sơ theo ràng buộc thực tế tại công trường."
+            }
+          }
+        ]
+      }
+    },
+    "interests": {
+      "enabled": true,
+      "title": {
+        "en": "Interests",
+        "vi": "Sở thích"
+      },
+      "items": [
+        {
+          "icon": "ic-strategy",
+          "label": {
+            "en": "Running",
+            "vi": "Chạy bộ"
+          },
+          "desc": {
+            "en": "Maintaining fitness and discipline through regular running.",
+            "vi": "Duy trì sức khỏe và kỷ luật cá nhân thông qua chạy bộ."
+          }
+        },
+        {
+          "icon": "ic-heart",
+          "label": {
+            "en": "Gym",
+            "vi": "Gym"
+          },
+          "desc": {
+            "en": "Building endurance for demanding site and project work.",
+            "vi": "Rèn luyện thể lực để đáp ứng công việc công trường và dự án."
+          }
+        },
+        {
+          "icon": "ic-megaphone",
+          "label": {
+            "en": "Music",
+            "vi": "Âm nhạc"
+          },
+          "desc": {
+            "en": "Listening to music to relax and recharge.",
+            "vi": "Nghe nhạc để thư giãn và nạp lại năng lượng."
+          }
+        },
+        {
+          "icon": "ic-hotairballoon",
+          "label": {
+            "en": "Traveling",
+            "vi": "Du lịch"
+          },
+          "desc": {
+            "en": "Exploring new places and cultures.",
+            "vi": "Khám phá địa điểm và văn hóa mới."
+          }
+        }
+      ]
+    },
+    "certificates": {
+      "enabled": true,
+      "title": {
+        "en": "Certificates",
+        "vi": "Chứng chỉ"
+      },
+      "subtitle": {
+        "en": "Language and office productivity credentials",
+        "vi": "Chứng chỉ ngoại ngữ và tin học văn phòng"
+      },
+      "items": [
+        {
+          "name": "IELTS Academic 6.0",
+          "desc": {
+            "en": "English communication certificate, achieved in 2022.",
+            "vi": "Chứng chỉ tiếng Anh, đạt năm 2022."
+          },
+          "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80"
+        },
+        {
+          "name": "MOS Word 2019",
+          "desc": {
+            "en": "Microsoft Office Specialist certification for Word.",
+            "vi": "Chứng chỉ Microsoft Office Specialist cho Word."
+          },
+          "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80"
+        },
+        {
+          "name": "MOS Excel 2019",
+          "desc": {
+            "en": "Microsoft Office Specialist certification for Excel.",
+            "vi": "Chứng chỉ Microsoft Office Specialist cho Excel."
+          },
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80"
+        },
+        {
+          "name": "MOS PowerPoint 2019",
+          "desc": {
+            "en": "Microsoft Office Specialist certification for PowerPoint.",
+            "vi": "Chứng chỉ Microsoft Office Specialist cho PowerPoint."
+          },
+          "image": "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=900&q=80"
+        }
+      ]
+    },
+    "projects": {
+      "enabled": true,
+      "title": {
+        "en": "Projects",
+        "vi": "Dự án"
+      },
+      "subtitle": {
+        "en": "Academic and technical projects related to automation, electrical and MEP systems",
+        "vi": "Dự án học tập và kỹ thuật liên quan đến tự động hóa, điện và hệ thống MEP"
+      },
+      "items": [
+        {
+          "name": "Solar Tracking Monitoring & Control System",
+          "desc": {
+            "en": "Designed a microcontroller-based system to monitor and control self-tracking solar cells, including servo motor control, light direction sensing, and IoT data logging to cloud tools.",
+            "vi": "Thiết kế hệ thống vi điều khiển giám sát và điều khiển pin mặt trời tự xoay, gồm điều khiển servo, cảm biến hướng sáng và gửi dữ liệu IoT lên cloud."
+          },
+          "tech": "Microcontroller, Servo Motor, Sensors, IoT, Google Sheets, Node-RED",
+          "tags": ["2021", "Embedded", "IoT"],
+          "image": "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "name": "Wastewater Treatment PLC/SCADA Simulation",
+          "desc": {
+            "en": "Designed a wastewater treatment system simulation using Siemens TIA Portal V16, with PLC operation logic, SCADA interface, data collection, and warning functions.",
+            "vi": "Thiết kế mô phỏng hệ thống xử lý nước thải bằng Siemens TIA Portal V16, gồm logic vận hành PLC, giao diện SCADA, thu thập dữ liệu và cảnh báo."
+          },
+          "tech": "Siemens TIA Portal V16, PLC, SCADA, Data Collection",
+          "tags": ["2022", "PLC", "SCADA"],
+          "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          "name": "Flyback Circuit Design & Simulation",
+          "desc": {
+            "en": "Graduation thesis focused on flyback circuit design and simulation using MATLAB/Simulink, including input/output power calculation and electronic component analysis.",
+            "vi": "Đồ án tốt nghiệp về thiết kế và mô phỏng mạch flyback bằng MATLAB/Simulink, gồm tính toán công suất vào/ra và phân tích linh kiện điện tử."
+          },
+          "tech": "MATLAB, Simulink, Power Electronics, Circuit Calculation",
+          "tags": ["2023", "Graduation Thesis"],
+          "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80"
+        }
+      ]
+    },
+    "gallery": {
+      "enabled": true,
+      "title": {
+        "en": "Engineering Gallery",
+        "vi": "Hình ảnh minh họa kỹ thuật"
+      },
+      "subtitle": {
+        "en": "Representative imagery for MEP, electrical and construction-site engineering work. No old personal photo is used.",
+        "vi": "Ảnh minh họa cho công việc MEP, điện và kỹ thuật công trường. Không sử dụng ảnh cá nhân cũ."
+      },
+      "items": [
+        {
+          "image": "https://images.unsplash.com/photo-1759692071712-adc78a8516c8?auto=format&fit=crop&w=1000&q=80",
+          "caption": {
+            "en": "Industrial electrical equipment and backup power systems",
+            "vi": "Thiết bị điện công nghiệp và hệ thống nguồn dự phòng"
+          }
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=80",
+          "caption": {
+            "en": "Automation and control engineering environment",
+            "vi": "Môi trường kỹ thuật tự động hóa và điều khiển"
+          }
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1000&q=80",
+          "caption": {
+            "en": "Construction and MEP coordination on site",
+            "vi": "Phối hợp thi công và MEP tại công trường"
+          }
+        }
+      ]
+    }
+  }
+}

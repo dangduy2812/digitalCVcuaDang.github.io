@@ -10,6 +10,17 @@
       "updated": "2026-06-11",
       "deployUrl": "https://dangduy2812.github.io/cv-java-software-engineer/",
       "githubRepo": "https://github.com/dangduy2812/cv-java-software-engineer"
+    },
+    {
+      "id": "mep",
+      "repoFolder": "repo_CV_MEP",
+      "title": { "en": "MEP Engineer CV", "vi": "CV Kỹ sư MEP" },
+      "role": { "en": "Automation / Electrical / MEP Engineer", "vi": "Kỹ sư Tự động hóa / Điện / MEP" },
+      "accent": "#0f766e",
+      "thumbnail": "https://images.unsplash.com/photo-1759692071712-adc78a8516c8?auto=format&fit=crop&w=900&q=80",
+      "updated": "2026-06-14",
+      "deployUrl": "https://dangduy2812.github.io/cv-mep-engineer/",
+      "githubRepo": "https://github.com/dangduy2812/cv-mep-engineer"
     }
   ]
 }
