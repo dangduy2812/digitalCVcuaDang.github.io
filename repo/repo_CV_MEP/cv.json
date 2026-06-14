@@ -7,7 +7,7 @@
       "vi": "Kỹ sư Tự động hóa / Điện / MEP"
     },
     "accent": "#0f766e",
-    "avatar": "https://images.unsplash.com/photo-1759692071712-adc78a8516c8?auto=format&fit=crop&w=900&q=80",
+    "avatar": "https://dangduy2812.github.io/digitalCVcuaDang.github.io/images/default-avatar.png",
     "cvPdf": "https://dangduy2812.github.io/digitalCVcuaDang.github.io/Nguyen-Phan-DuyDang_MEP_Engineer.pdf",
     "tags": ["MEP", "Electrical", "AutoCAD", "PLC/SCADA", "Quantity Take-off"]
   },
@@ -367,31 +367,31 @@
             "en": "English communication certificate, achieved in 2022.",
             "vi": "Chứng chỉ tiếng Anh, đạt năm 2022."
           },
-          "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80"
+          "image": "https://dangduy2812.github.io/digitalCVcuaDang.github.io/images/cert-ielts-academic.jpg"
         },
         {
-          "name": "MOS Word 2019",
+          "name": "MOS Word",
           "desc": {
             "en": "Microsoft Office Specialist certification for Word.",
             "vi": "Chứng chỉ Microsoft Office Specialist cho Word."
           },
-          "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80"
+          "image": "https://dangduy2812.github.io/digitalCVcuaDang.github.io/images/cert-mos-word-2010.jpg"
         },
         {
-          "name": "MOS Excel 2019",
+          "name": "MOS Excel",
           "desc": {
             "en": "Microsoft Office Specialist certification for Excel.",
             "vi": "Chứng chỉ Microsoft Office Specialist cho Excel."
           },
-          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80"
+          "image": "https://dangduy2812.github.io/digitalCVcuaDang.github.io/images/cert-mos-excel-2016.jpg"
         },
         {
-          "name": "MOS PowerPoint 2019",
+          "name": "MOS PowerPoint",
           "desc": {
             "en": "Microsoft Office Specialist certification for PowerPoint.",
             "vi": "Chứng chỉ Microsoft Office Specialist cho PowerPoint."
           },
-          "image": "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=900&q=80"
+          "image": "https://dangduy2812.github.io/digitalCVcuaDang.github.io/images/cert-mos-powerpoint-2016.jpg"
         }
       ]
     },
@@ -445,8 +445,8 @@
         "vi": "Hình ảnh minh họa kỹ thuật"
       },
       "subtitle": {
-        "en": "Representative imagery for MEP, electrical and construction-site engineering work. No old personal photo is used.",
-        "vi": "Ảnh minh họa cho công việc MEP, điện và kỹ thuật công trường. Không sử dụng ảnh cá nhân cũ."
+        "en": "Representative imagery for MEP, electrical and construction-site engineering work. Avatar and certificates use the original real assets.",
+        "vi": "Ảnh minh họa cho công việc MEP, điện và kỹ thuật công trường. Avatar và chứng chỉ dùng ảnh thật gốc."
       },
       "items": [
         {

@@ -11,7 +11,7 @@ Nguồn dữ liệu CV Automation / Electrical / MEP Engineer.
 
 ## Ghi chú hình ảnh
 
-CV này không dùng ảnh cá nhân cũ. Các hình trong `cv.json` là ảnh minh họa từ web, chỉ dùng cho ngữ cảnh MEP, điện, công trường, dự án kỹ thuật và chứng chỉ.
+Avatar dùng lại ảnh thật `images/default-avatar.png`. Các chứng chỉ dùng ảnh thật đang có trong thư mục `images/`. Các hình còn lại trong phần dự án/thư viện là ảnh minh họa từ web, chỉ dùng cho ngữ cảnh MEP, điện, công trường và dự án kỹ thuật.
 
 ## Export gửi nhà tuyển dụng
 
